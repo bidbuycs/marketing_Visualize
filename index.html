@@ -8,6 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 <style>
+  .chart-wrap.mini { height: 180px; }
 :root{
   --bg:#f5f7fa; --panel:#ffffff; --text:#111827; --muted:#6b7280; --line:#e5e7eb;
   --navy:#1f2937; --blue:#2563eb; --green:#15803d; --amber:#d97706; --red:#dc2626;
@@ -252,16 +253,16 @@ a{text-decoration:none}
       <span>BIDBUY KOREA · 마케팅 제안서</span>
     </div>
     <div class="quick-nav">
-      <a href="#slide1">1. 문제 정의</a>
+      <a href="#slide1">1. 현황</a>
       <a href="#slide2">2. VIP 복귀</a>
-      <a href="#slide3">3. 현황 진단</a>
-      <a href="#slide4">4. 전략 구조</a>
-      <a href="#slide5">5. 성과 목표</a>
-      <a href="#slide6">6. 론칭 이벤트</a>
-      <a href="#slide7">7. 카카오/콘텐츠</a>
-      <a href="#slide8">8. 검색 전략</a>
-      <a href="#slide9">9. 인플루언서</a>
-      <a href="#slide10">10. 예산/KPI</a>
+      <a href="#slide3">3. 카카오 전략</a>
+      <a href="#slide4">4. 블로그 전략</a>
+      <a href="#slide5">5. 키워드 전략</a>      
+      <a href="#slide6">6. 인플루언서 협업</a>
+      <a href="#slide7">7. 이벤트</a>
+      <a href="#slide8">8. KPI / 예산</a>
+      <a href="#slide9">9. 마케팅 목표</a>
+
     </div>
   </div>
 </div>
@@ -272,73 +273,106 @@ a{text-decoration:none}
 <section class="slide" id="slide1">
   <div class="container">
     <div class="card slide-card">
-      <span class="kicker">01 · Problem Statement</span>
+      <span class="kicker">01 · Executive Summary</span>
       <div class="title-row">
         <div>
-          <div class="h2">마케팅이 없는 동안, 회원 85%는 비드바이를 잊어가고 있습니다</div>
-          <div class="subtitle">회원은 3만명이지만 공식 채널로 닿는 고객은 15%뿐 — 리뉴얼 론칭 전, 마케팅 접점 구조를 먼저 재설계해야 합니다.</div>
+          <div class="h2">정책 개편의 효과, 마케팅이 없으면 고객에게 닿지 않습니다</div>
+          <div class="subtitle">3채널 재설계 · 채널별 목표 수치 · 투자 규모 요약</div>
         </div>
         <div class="page-no">1 / 10</div>
       </div>
 
-      <div class="problem-result">
-        <div class="equal-stack">
-          <div class="metric soft-red">
-            <div class="label">채널 접점 부재</div>
-            <div class="value" style="font-size:20px;line-height:1.2;">단일 채널 의존</div>
-            <div class="desc">네이버 광고 30만원/월 단독 집행 — 카카오·콘텐츠·인플루언서 미활용</div>
-          </div>
-          <div class="metric soft-amber">
-            <div class="label">회원 도달 구조 문제</div>
-            <div class="value" style="font-size:20px;line-height:1.2;">85% 미접점</div>
-            <div class="desc">3만 회원 중 2만 5천명은 어떤 채널로도 닿지 않는 상태</div>
-          </div>
-          <div class="metric soft-blue">
-            <div class="label">광고 효율 저하</div>
-            <div class="value" style="font-size:20px;line-height:1.2;">CTR 2.05%</div>
-            <div class="desc">키워드 재구성 없이 집행 중 — 목표 3.8% 대비 1.75%p 미달</div>
+      <!-- 상단 KPI 3개 — 마케팅 덱 고유 수치만 -->
+      <div class="three-col" style="margin-top:20px;">
+        <div class="metric">
+          <div class="label">현행 월 마케팅 예산</div>
+          <div class="value">50만원</div>
+          <div class="desc">네이버 키워드 단일 채널 집행중</div>
+        </div>
+        <div class="metric">
+          <div class="label">현행 네이버 광고 성과</div>
+          <div class="value">월 477건</div>
+          <div class="desc">CTR 2.05% · CPC 804원 · 목표 대비 클릭 -52%</div>
+        </div>
+        <div class="metric">
+          <div class="label">카카오 채널 구독자</div>
+          <div class="value">4,500명</div>
+          <div class="desc">전체 회원의 15% · 25년도 정기 발송 설계 없이 방치 중</div>
+        </div>
+      </div>
+
+      <!-- 중단: 현행 → 3채널 구조 → 목표 -->
+      <div style="margin-top:20px; display:grid; grid-template-columns:1fr 40px 1fr 40px 1fr; gap:0; align-items:stretch;">
+
+        <!-- 현행 문제 -->
+        <div class="panel" style="border-top:4px solid var(--soft-red);">
+          <div style="font-size:11px; font-weight:800; color:var(--red); letter-spacing:.08em; margin-bottom:10px;">AS-IS · 현행 구조</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-red); background:var(--soft-red);">
+              <div style="font-size:12px; font-weight:700; color:#991b1b;">네이버 광고 단독 의존</div>
+              <div style="font-size:12px; color:#7f1d1d; margin-top:3px;">월 50만원 · 클릭 477건 · CTR 2.05%</div>
+            </div>
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-red); background:var(--soft-red);">
+              <div style="font-size:12px; font-weight:700; color:#991b1b;">카카오 미활용</div>
+              <div style="font-size:12px; color:#7f1d1d; margin-top:3px;">4,500명 구독자<br>2025년도 세그먼트 발송 5개월</div>
+            </div>
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-red); background:var(--soft-red);">
+              <div style="font-size:12px; font-weight:700; color:#991b1b;">정기 컨텐츠 발생, 인플루언서 협업</div>
+              <div style="font-size:12px; color:#7f1d1d; margin-top:3px;">블로그 쿠폰, 인플</div>
+            </div>
           </div>
         </div>
-        <div class="arrow-col">
-          <div class="arrow-symbol">→</div>
+
+        <div style="display:flex; align-items:center; justify-content:center;">
+          <div style="font-size:20px; color:var(--muted);">→</div>
         </div>
-        <div class="equal-stack">
-          <div class="metric soft-red">
-            <div class="label">리뉴얼 효과 반감 위험</div>
-            <div class="value" style="font-size:20px;line-height:1.2;">서비스 개편 후에도<br>인식 없음</div>
-            <div class="desc">고객이 알지 못하면 수수료 인하도 의미 없음</div>
+
+        <!-- 3채널 전환 -->
+        <div class="panel" style="border-top:4px solid var(--soft-blue);">
+          <div style="font-size:11px; font-weight:800; color:var(--blue); letter-spacing:.08em; margin-bottom:10px;">TO-BE · 3채널 구조</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-blue); background:var(--soft-blue);">
+              <div style="font-size:12px; font-weight:700; color:#1e40af;">카카오톡 채널</div>
+              <div style="font-size:12px; color:#1e3a8a; margin-top:3px;">전환·재활성 담당 · VIP 복귀 세그먼트 설계</div>
+            </div>
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-green); background:var(--soft-green);">
+              <div style="font-size:12px; font-weight:700; color:#166534;">블로그 + 네이버 광고</div>
+              <div style="font-size:12px; color:#14532d; margin-top:3px;">신규 유입 담당 · 키워드 재구성 + 예산 증액</div>
+            </div>
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-amber); background:var(--soft-amber);">
+              <div style="font-size:12px; font-weight:700; color:#92400e;">마이크로 인플루언서</div>
+              <div style="font-size:12px; color:#78350f; margin-top:3px;">브랜드 인지 담당 · Tier 1 테스트 후 확장</div>
+            </div>
           </div>
-          <div class="metric soft-amber">
-            <div class="label">기가입·미거래 방치</div>
-            <div class="value" style="font-size:20px;line-height:1.2;">전환 트리거 부재</div>
-            <div class="desc">가입 후 거래 없는 회원에 대한 재활성 메시지 없음</div>
-          </div>
-          <div class="metric soft-blue">
-            <div class="label">예산 대비 성과 한계</div>
-            <div class="value" style="font-size:20px;line-height:1.2;">월 클릭 477건</div>
-            <div class="desc">예산 구조적 확대 없이는 성장 불가 — 목표 1,000건 대비 -52%</div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:center;">
+          <div style="font-size:20px; color:var(--muted);">→</div>
+        </div>
+
+        <!-- 채널별 목표 -->
+        <div class="panel" style="border-top:4px solid var(--soft-green);">
+          <div style="font-size:11px; font-weight:800; color:var(--green); letter-spacing:.08em; margin-bottom:10px;">TARGET · 채널별 목표</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-blue); background:var(--soft-blue);">
+              <div style="font-size:12px; font-weight:700; color:#1e40af;">카카오 CTR</div>
+              <div style="font-size:14px; font-weight:900; color:#2563eb; margin-top:2px;">기존 대비 +10~20%</div>
+              <div style="font-size:12px; color:#1e3a8a;">미거래 회원 전환 5%+ 목표</div>
+            </div>
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-green); background:var(--soft-green);">
+              <div style="font-size:12px; font-weight:700; color:#166534;">월 클릭수</div>
+              <div style="font-size:14px; font-weight:900; color:#15803d; margin-top:2px;">477건 → 1,000건</div>
+              <div style="font-size:12px; color:#166534;">예산 50→80만원 · CTR 2.05→3.8%</div>
+            </div>
+            <div style="padding:10px 12px; border-left:3px solid var(--soft-amber); background:var(--soft-amber);">
+              <div style="font-size:12px; font-weight:700; color:#92400e;">월 투자 규모</div>
+              <div style="font-size:14px; font-weight:900; color:#d97706; margin-top:2px;">200만원 / 연 2,400만원</div>
+              <div style="font-size:12px; color:#78350f;">현행 50만원 대비 +300% · 3채널 분산</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="panel" style="margin-top:18px;">
-        <h3>3가지 구조적 문제가 동시에 작동 중입니다</h3>
-        <table class="compare-table">
-          <thead><tr><th>문제</th><th>현상</th><th>영향</th></tr></thead>
-          <tbody>
-            <tr><td><strong>접점 부족</strong></td><td>카카오 구독 15% / 미접점 85%</td><td>리뉴얼 효과가 기존 회원에게 전달되지 않음</td></tr>
-            <tr><td><strong>광고 비효율</strong></td><td>키워드 단가 804원 / 클릭 477건</td><td>낮은 CTR과 높은 CPC로 예산 낭비 구조</td></tr>
-            <tr><td><strong>전환 설계 부재</strong></td><td>신규 가입 후 63.6% 거래 없이 이탈</td><td>유입이 늘어도 거래로 전환되지 않는 구조</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="kpi-row-h" style="margin-top:18px;">
-        <div class="metric"><div class="label">전체 회원 수</div><div class="value">3만명</div><div class="desc">누적 가입 기준</div></div>
-        <div class="metric soft-blue"><div class="label">카카오 구독자</div><div class="value">4,500명</div><div class="desc">전체 15% — 85%는 미구독</div></div>
-        <div class="metric soft-amber"><div class="label">현재 마케팅 예산</div><div class="value">30만원/월</div><div class="desc">단일 채널 집행 중</div></div>
-        <div class="metric soft-green"><div class="label">론칭 목표 시점</div><div class="value">2026 하반기</div><div class="desc">리뉴얼 오픈 기준</div></div>
-      </div>
     </div>
   </div>
 </section>
@@ -349,19 +383,21 @@ a{text-decoration:none}
 <section class="slide" id="slide2">
   <div class="container">
     <div class="card slide-card">
-      <span class="kicker">02 · VIP Churn Crisis</span>
+      <span class="kicker">02 · VIP Return Project</span>
       <div class="title-row">
         <div>
-          <div class="h2">VIP 27명 이탈 — 지금 이 순간도 연 7,650만원이 사라지고 있습니다</div>
+          <div class="h2">이탈 VIP, 다시 매출로 되돌리는 전략</div>
           <div class="subtitle">전체 매출의 32.9%를 담당하는 VIP가 줄어드는 구조를 그냥 두면, 어떤 마케팅도 의미가 없습니다.</div>
         </div>
         <div class="page-no">2 / 10</div>
       </div>
+
+      <!-- KPI 3개 -->
       <div class="three-col" style="margin-top:18px;">
         <div class="metric soft-red">
-          <div class="label">VIP 이탈로 인한 연 손실</div>
-          <div class="value">7,650만원</div>
-          <div class="desc">27명 이탈 기준 · VIP 1인 월 수익 ¥24,000</div>
+          <div class="label">VIP 실이탈 연간 손실 추정</div>
+          <div class="value">약 5.5억원</div>
+          <div class="desc">6개월 미복귀 188명 기준 · 정책 제안서 동일 수치</div>
         </div>
         <div class="metric soft-amber">
           <div class="label">현재 VIP 인원</div>
@@ -374,61 +410,69 @@ a{text-decoration:none}
           <div class="desc">전체 거래 비중 중 VIP 단독 점유</div>
         </div>
       </div>
+
       <div class="two-col">
+
+        <!-- 좌: 복귀 인센티브 -->
         <div class="stack">
           <div class="panel" style="border-top:4px solid var(--blue);">
-            <h3>🔵 VIP 복귀 시나리오</h3>
-            <div class="panel-sub">이탈한 VIP 고객이 다시 활동을 시작했을 때 적용되는 인센티브 구조</div>
+            <h3>VIP 복귀 인센티브 구조</h3>
+            <div class="panel-sub">복귀 확인 즉시 3가지 혜택 자동 적용</div>
             <div class="reward-list">
               <div class="reward-item">
-                <div class="ri-icon">🏅</div>
+                <div class="ri-icon" style="font-size:16px;">🏅</div>
                 <div class="ri-text">
                   <strong>VIP 등급 3개월 고정</strong>
-                  <span>복귀 시 거래 건수와 무관하게 VIP 등급 3개월간 자동 유지 — 재활성화 부담 제거</span>
+                  <span>거래 건수 무관하게 VIP 등급 3개월 자동 유지 — 재활성 부담 제거</span>
                 </div>
               </div>
               <div class="reward-item">
-                <div class="ri-icon">💰</div>
+                <div class="ri-icon" style="font-size:16px;">💰</div>
                 <div class="ri-text">
                   <strong>복귀 마일리지 10만원 즉시 지급</strong>
-                  <span>복귀 확인 후 마일리지 100,000원 지급 — 첫 거래 진입 장벽 제거에 직접 작용</span>
+                  <span>첫 거래 진입 장벽 직접 제거 — 회수 기간 약 2주 (월 22건 기준)</span>
                 </div>
               </div>
               <div class="reward-item">
-                <div class="ri-icon">📋</div>
+                <div class="ri-icon" style="font-size:16px;">📋</div>
                 <div class="ri-text">
-                  <strong>VIP 이탈 사유 설문 + 완료 시 1만 마일리지</strong>
-                  <span>이탈 원인 파악 목적 설문 · 완료 즉시 10,000원 마일리지 지급 — 참여율 제고</span>
+                  <strong>이탈 사유 설문 + 완료 시 마일리지 1만원</strong>
+                  <span>이탈 원인 데이터 확보 · 정책 개선 방향 반영</span>
                 </div>
               </div>
             </div>
             <div class="insight blue" style="margin-top:12px;">
-              <strong>분석:</strong> 복귀 VIP 1명이 월 22건 거래를 재개하면 월 약 23만원 수익 회복 — 마일리지 10만원 투자 대비 회수 기간은 약 2주입니다.
+              <strong>분석:</strong> 복귀 VIP 10명이 월 22건 거래를 재개하면 월 약 230만원 수익 회복 — 마일리지 투자 100만원 대비 회수 기간 약 2주입니다.
             </div>
           </div>
         </div>
+
+        <!-- 우: 등급 개편 연계 -->
         <div class="stack">
           <div class="panel" style="border-top:4px solid var(--green);">
-            <h3>🟢 3단계 등급 개편 연계: 프리미엄 → VIP 자동 전환</h3>
+            <h3>등급 개편 연계 · 복귀 VIP → VIP 자동 전환</h3>
             <div class="panel-sub">등급 개편 시 기존 프리미엄 중 VIP 미달 고객에 대한 전환 혜택</div>
             <div class="grade-transition">
               <div class="grade-box">
-                <div style="font-size:11px;font-weight:800;color:var(--muted);margin-bottom:6px;letter-spacing:.06em;">현행 5단계</div>
-                <div class="grade-tag" style="background:#e9f4e9;">우수 (100~199점)</div>
-                <div style="text-align:center;font-size:18px;color:var(--muted);padding:2px 0;">+</div>
-                <div class="grade-tag" style="background:#c3dbc9;">프리미엄 (200점 이상)</div>
-                <div style="margin-top:6px;font-size:11px;color:var(--muted);">※ VIP 기준 미달 프리미엄 포함</div>
+                <div style="font-size:11px; font-weight:800; color:var(--muted); margin-bottom:6px; letter-spacing:.06em;">현행 5단계</div>
+                <div class="grade-tag" style="background:#e9f4e9;">프리미엄 (500점 이상)</div>
+                <div style="text-align:center; font-size:18px; color:var(--muted); padding:4px 0;">+</div>
+                <div class="grade-tag" style="background:#c3dbc9;">VIP (500점 & 거래건수 70건 이상)</div>
+                <div style="margin-top:6px; font-size:11px; color:var(--muted);">※ VIP 기준 미달 프리미엄 포함</div>
               </div>
               <div class="grade-arrow">→</div>
               <div class="grade-box">
-                <div style="font-size:11px;font-weight:800;color:var(--muted);margin-bottom:6px;letter-spacing:.06em;">개편 후 3단계</div>
-                <div class="grade-tag" style="background:#c6def9;font-weight:800;font-size:14px;padding:12px;">🔵 VIP 등급<br><span style="font-size:11px;font-weight:400;">(3개월 고정 보장)</span></div>
-                <div style="margin-top:10px;padding:10px 12px;background:var(--soft-green);border-radius:10px;font-size:12px;color:#166534;">
-                  <strong>적용 혜택:</strong><br>
-                  • EMS·비바특송 10% 할인<br>
-                  • 재포장 비용 무료<br>
-                  • 마일리지 10% 적립<br>
-                  • VIP 전담 CS 접근
+                <div style="font-size:11px; font-weight:800; color:var(--muted); margin-bottom:6px; letter-spacing:.06em;">개편 후 3단계</div>
+                <div class="grade-tag" style="background:#c6def9; font-weight:800; font-size:14px; padding:12px;">
+                  VIP 등급<br>
+                  <span style="font-size:11px; font-weight:400;">(3개월 고정 보장)</span>
+                </div>
+                <div style="margin-top:10px; padding:10px 12px; background:var(--soft-green); border-radius:10px; font-size:12px; color:#166534;">
+                  <strong>적용 혜택</strong><br>
+                  · EMS,비바 항공 10% 할인 / 선편 5% 할인<br>
+                  · 재포장 비용 무료<br>
+                  · 마일리지 10% 적립<br>
+                  · VIP 전담 CS 접근
                 </div>
               </div>
             </div>
@@ -437,7 +481,10 @@ a{text-decoration:none}
             </div>
           </div>
         </div>
+
       </div>
+
+      <!-- 하단: 설문 설계 -->
       <div class="panel" style="margin-top:16px;">
         <h3>VIP 이탈 사유 설문 설계</h3>
         <div class="panel-sub">이탈 원인 데이터 수집 → 정책 개선 피드백 루프 구축</div>
@@ -454,6 +501,7 @@ a{text-decoration:none}
           <strong>분석:</strong> 마일리지 1만원으로 VIP 이탈 원인 데이터를 확보하고, 정책 개선의 방향성을 데이터 기반으로 설계할 수 있습니다 — 비용 대비 가장 효율적인 인사이트 확보 방법입니다.
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -464,45 +512,100 @@ a{text-decoration:none}
 <section class="slide" id="slide3">
   <div class="container">
     <div class="card slide-card">
-      <span class="kicker">03 · Current Status</span>
+      <span class="kicker">03 · Kakao Channel </span>
       <div class="title-row">
         <div>
-          <div class="h2">채널 도달률 15% — 닿는 고객이 없으면 전략도 없습니다</div>
-          <div class="subtitle">회원 규모는 충분하지만 실제 마케팅 접점은 극도로 제한적입니다. 광고 효율과 채널 다변화가 동시에 필요합니다.</div>
+          <div class="h2">카카오 CTR, 발송 여부에 따라 최대 3배 차이</div>
+          <div class="subtitle">채널은 이미 있습니다. 문제는 구조적으로 쓰지 않고 있다는 것입니다.</div>
         </div>
         <div class="page-no">3 / 10</div>
       </div>
+
       <div class="two-col">
-        <div class="panel">
-          <h3>회원 채널 구독 구조</h3>
-          <div class="panel-sub">3만명 중 공식 채널 도달 가능 인원은 4,500명</div>
-          <div class="chart-wrap"><canvas id="memberDonut"></canvas></div>
-          <div class="small-note">* 미구독 25,500명 → 이메일·사이트 배너 등 대체 접점 설계 필요</div>
-        </div>
+
+        <!-- 좌: CTR 추이 + 구독자 구성 -->
         <div class="stack">
           <div class="panel">
-            <h3>네이버 검색광고 현황 (2025)</h3>
-            <div class="panel-sub">월 30만원 집행 기준 · 키워드 재구성 이전</div>
-            <div class="three-col" style="margin-top:12px;">
-              <div class="metric"><div class="label">평균 CTR</div><div class="value" style="font-size:24px;">2.05%</div><div class="desc">목표 3.8%<br>(+1.75%p)</div></div>
-              <div class="metric soft-amber"><div class="label">평균 CPC</div><div class="value" style="font-size:24px;">804원</div><div class="desc">목표 600원<br>(-204원)</div></div>
-              <div class="metric soft-blue"><div class="label">월 총 클릭</div><div class="value" style="font-size:24px;">477건</div><div class="desc">목표 1,000건<br>(+523건)</div></div>
+            <h3>카카오 월별 CTR 추이 (2025년)</h3>
+            <div class="panel-sub">3월 데이터 없음 제외 · 11개월 기준</div>
+            <div class="chart-wrap"><canvas id="kakaoCtrChart"></canvas></div>
+            <div class="insight red" style="margin-top:12px;">
+              <strong>분석:</strong> 2월 CTR 0.82%로 연중 최고 — 타 월 평균 0.43% 대비 약 2배 수준입니다.
+              정기 세그먼트 발송 설계가 없어 <strong>월별 성과가 구조적으로 불안정</strong>한 상태입니다.
             </div>
           </div>
           <div class="panel">
-            <h3>일평균 거래 현황 (2025년 3월)</h3>
-            <div class="three-col" style="margin-top:12px;">
-              <div class="metric soft-green"><div class="label">나이스페이 결제</div><div class="value" style="font-size:24px;">375건</div><div class="desc">일평균 거래건수</div></div>
-              <div class="metric soft-blue"><div class="label">입찰 건수</div><div class="value" style="font-size:24px;">575건</div><div class="desc">3월 일평균 기준</div></div>
-              <div class="metric"><div class="label">카카오 CTR 편차</div><div class="value" style="font-size:20px;">2.8~11%</div><div class="desc">광고톡 발송 월에만 CTR 상승</div></div>
-            </div>
-          </div>
-          <div class="insight red">
-            <strong>분석:</strong> 카카오 CTR은 광고톡 발송 여부에만 반응 — 지속적 세그먼트 발송 설계가 없어 월별 편차가 4배 이상 발생합니다.
+            <h3>카카오 구독자 구성</h3>
+            <div class="panel-sub">4,500명 — 정기 발송 설계 시 추가 비용 없이 즉시 활용 가능</div>
+            <div class="chart-wrap mini"><canvas id="kakaoDonut"></canvas></div>
           </div>
         </div>
+
+        <!-- 우: 발송 타임라인 + 세그먼트 전략 -->
+        
+          <div class="panel">
+            
+
+          
+  <h3>세그먼트별 발송 전략</h3>
+  <div class="panel-sub">이벤트 광고톡 외 정기 큐레이션 편성</div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+
+    <!-- 신규 유입 -->
+    <div style="border:1px solid var(--line); border-radius:14px; padding:16px 18px; background:#fff;">
+      <span class="pill blue" style="margin-bottom:10px; display:inline-block;">신규 유입</span>
+      <div style="font-size:17px; font-weight:900; color:var(--text); margin-bottom:12px; line-height:1.3;">가격 장벽 완화 메시지</div>
+      <div style="font-size:13px; color:#374151; line-height:1.8;">
+        📢 비드바이 리뉴얼 핵심 3가지<br>
+        💰 수수료 구조 전면 개편<br>
+        🖥 완전히 새로운 화면<br>
+        🎁 첫 거래 고객 특별 혜택<br><br>
+        채널 알림 ON 해두시면 오픈 당일<br>가장 먼저 받아보실 수 있어요 🔔
       </div>
     </div>
+
+    <!-- 재구매 유도 -->
+    <div style="border:1px solid var(--line); border-radius:14px; padding:16px 18px; background:#fff;">
+      <span class="pill green" style="margin-bottom:10px; display:inline-block;">재구매 유도</span>
+      <div style="font-size:17px; font-weight:900; color:var(--text); margin-bottom:12px; line-height:1.3;">미거래 회원 재활성화</div>
+      <div style="font-size:13px; color:#374151; line-height:1.8;">
+        한동안 뵙지 못했는데,<br>잘 지내셨나요? 😊<br>
+        비드바이가 새롭게 오픈했어요!<br><br>
+        🍯 복귀 감사 혜택 (특별히 더 드려요!)<br>
+        ✔️ 마일리지 5,000원 즉시 적립 💛<br><br>
+        ⏰ 이벤트는 4주간만 운영해요!
+      </div>
+    </div>
+
+    <!-- 이탈 VIP -->
+    <div style="border:1px solid var(--line); border-radius:14px; padding:16px 18px; background:#fff;">
+      <span class="pill red" style="margin-bottom:10px; display:inline-block;">이탈 VIP</span>
+      <div style="font-size:17px; font-weight:900; color:var(--text); margin-bottom:12px; line-height:1.3;">VIP 복귀 전용 혜택</div>
+      <div style="font-size:13px; color:#374151; line-height:1.8;">
+        그동안 얼마나 그리웠는지 몰라요 🙏<br><br>
+        👑 VIP 등급 3개월 즉시 고정<br>
+        💰 복귀 마일리지 10만원 지급<br>
+        📋 이탈 사유 설문 완료 시 +1만원<br><br>
+        ⏰ 복귀 혜택은 오픈 후 4주간만!
+      </div>
+    </div>
+
+    <!-- 기존 활성 -->
+    <div style="border:1px solid var(--line); border-radius:14px; padding:16px 18px; background:#fff;">
+      <span class="pill amber" style="margin-bottom:10px; display:inline-block;">기존 활성</span>
+      <div style="font-size:17px; font-weight:900; color:var(--text); margin-bottom:12px; line-height:1.3;">리뉴얼 변경사항 안내</div>
+      <div style="font-size:13px; color:#374151; line-height:1.8;">
+        항상 이용해 주셔서 감사합니다 💛<br><br>
+        ✨ 비드바이가 새로워졌어요!<br>
+        🔄 수수료 구조 개편 안내<br>
+        🎁 마일리지 제도 새롭게 시작<br><br>
+        달라진 혜택 꼭 확인해 보세요 🔔
+      </div>
+    </div>
+
+  </div>
+
   </div>
 </section>
 
@@ -512,7 +615,7 @@ a{text-decoration:none}
 <section class="slide" id="slide4">
   <div class="container">
     <div class="card slide-card">
-      <span class="kicker">04 · Strategy Framework</span>
+      <span class="kicker">04 · Blog Strategy</span>
       <div class="title-row">
         <div>
           <div class="h2">채널 추가가 아닌, 전환 구조 재설계</div>
@@ -520,7 +623,81 @@ a{text-decoration:none}
         </div>
         <div class="page-no">4 / 10</div>
       </div>
+
       <div class="strategy-frame">
+
+        <!-- 상단: 3채널 퍼널 (유지) -->
+
+
+        <!-- 하단: 블로그 4시리즈 전략 (교체) -->
+        <div class="strategy-summary-card">
+          <h3 style="margin:0 0 4px;">네이버 블로그 4시리즈 전략</h3>
+          <div class="panel-sub" style="margin-bottom:16px;">월 4건 정기 발행 · AI 초안 + 담당자 검수 반자동화 · 목표: 3개월 내 월 유입 500명+</div>
+
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
+
+            <div style="padding:16px; border-radius:14px; border:1px solid var(--line); background:var(--soft-blue); display:flex; flex-direction:column; gap:8px;">
+              <div style="font-size:10px; font-weight:800; color:var(--blue); letter-spacing:.07em;">SERIES 01</div>
+              <div style="font-size:15px; font-weight:900; color:#1e3a8a; line-height:1.3;">[1엔의 행복]</div>
+              <div style="font-size:12px; color:#1e40af; line-height:1.55;">실제 낙찰 사례 + 국내 시세 비교</div>
+              <div style="margin-top:auto; padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#1e3a8a; margin-bottom:2px;">타겟</div>
+                경매 입문 고민자
+              </div>
+              <div style="padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#1e3a8a; margin-bottom:2px;">핵심 키워드</div>
+                야후옥션 낙찰 · 일본 경매 후기
+              </div>
+            </div>
+
+            <div style="padding:16px; border-radius:14px; border:1px solid var(--line); background:var(--soft-amber); display:flex; flex-direction:column; gap:8px;">
+              <div style="font-size:10px; font-weight:800; color:var(--amber); letter-spacing:.07em;">SERIES 02</div>
+              <div style="font-size:15px; font-weight:900; color:#78350f; line-height:1.3;">[가격 비교]</div>
+              <div style="font-size:12px; color:#92400e; line-height:1.55;">중고나라 vs 메루카리 실가격 비교</div>
+              <div style="margin-top:auto; padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#92400e; margin-bottom:2px;">타겟</div>
+                브랜드 매니아
+              </div>
+              <div style="padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#92400e; margin-bottom:2px;">핵심 키워드</div>
+                메루카리 구매대행 · 일본 중고 직구
+              </div>
+            </div>
+
+            <div style="padding:16px; border-radius:14px; border:1px solid var(--line); background:var(--soft-green); display:flex; flex-direction:column; gap:8px;">
+              <div style="font-size:10px; font-weight:800; color:var(--green); letter-spacing:.07em;">SERIES 03</div>
+              <div style="font-size:15px; font-weight:900; color:#14532d; line-height:1.3;">[직구 마스터]</div>
+              <div style="font-size:12px; color:#166534; line-height:1.55;">야후옥션 사기 필터링 · 배송 노하우</div>
+              <div style="margin-top:auto; padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#166534; margin-bottom:2px;">타겟</div>
+                해외 직구 초보자
+              </div>
+              <div style="padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#166534; margin-bottom:2px;">핵심 키워드</div>
+                야후옥션 입찰 방법 · 일본직구 배송
+              </div>
+            </div>
+
+            <div style="padding:16px; border-radius:14px; border:1px solid var(--line); background:var(--soft-gray); display:flex; flex-direction:column; gap:8px;">
+              <div style="font-size:10px; font-weight:800; color:var(--muted); letter-spacing:.07em;">SERIES 04</div>
+              <div style="font-size:15px; font-weight:900; color:#374151; line-height:1.3;">[마케터 체험]</div>
+              <div style="font-size:12px; color:#4b5563; line-height:1.55;">5만원 예산 체험기 과정 공개</div>
+              <div style="margin-top:auto; padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#374151; margin-bottom:2px;">타겟</div>
+                직구 흥미 고객층
+              </div>
+              <div style="padding:8px 10px; background:#fff; border-radius:8px; font-size:11px; color:var(--muted);">
+                <div style="font-weight:700; color:#374151; margin-bottom:2px;">핵심 키워드</div>
+                일본 직구 방법 · 경매대행 후기
+              </div>
+            </div>
+
+          </div>
+
+          <div class="insight green" style="margin-top:14px;">
+            <strong>분석:</strong> 키워드 우선 설계 → AI 초안 + 담당자 검수 반자동화 발행 → 포스팅 하단 비드바이 CTA 삽입 — 시리즈별 타겟을 분리해 검색 유입 풀을 구조적으로 넓힙니다.
+          </div>
+        </div>
         <div class="strategy-flow-card">
           <div style="margin-bottom:12px;">
             <h3>3채널 퍼널: 인지 → 유입 → 전환 → 재활성</h3>
@@ -530,58 +707,50 @@ a{text-decoration:none}
             <div class="strategy-step blue">
               <div class="step-no">1단계 · Awareness</div>
               <div class="step-title">브랜드 인지</div>
-              <div class="step-channel">🎥 인플루언서<br>📝 블로그</div>
+              <div class="step-channel">인플루언서 · 블로그</div>
               <div class="step-role">쇼츠·후기·비교형 콘텐츠로 비드바이를 처음 인식시키는 단계</div>
-              <div class="step-kpi"><div class="label">핵심 지표</div><div class="value">조회수 / 신규 유입</div><div class="desc">도달과 관심 형성</div></div>
+              <div class="step-kpi">
+                <div class="label">핵심 지표</div>
+                <div class="value">조회수 / 신규 유입</div>
+                <div class="desc">도달과 관심 형성</div>
+              </div>
             </div>
             <div class="strategy-step amber">
               <div class="step-no">2단계 · Acquisition</div>
               <div class="step-title">신규 유입</div>
-              <div class="step-channel">📝 블로그<br>🎥 추천코드 링크</div>
+              <div class="step-channel">블로그 · 추천코드 링크</div>
               <div class="step-role">검색 의도 고객을 사이트로 데려오는 단계. 키워드 검색과 CTA 클릭이 핵심</div>
-              <div class="step-kpi"><div class="label">핵심 지표</div><div class="value">월 유입 500+</div><div class="desc">블로그 3개월 목표</div></div>
+              <div class="step-kpi">
+                <div class="label">핵심 지표</div>
+                <div class="value">월 유입 500+</div>
+                <div class="desc">블로그 3개월 목표</div>
+              </div>
             </div>
             <div class="strategy-step green">
               <div class="step-no">3단계 · Conversion</div>
               <div class="step-title">거래 전환</div>
-              <div class="step-channel">💬 카카오톡 채널</div>
+              <div class="step-channel">카카오톡 채널</div>
               <div class="step-role">기가입·미거래 회원이 첫 거래를 완료하도록 세그먼트 메시지로 전환 유도</div>
-              <div class="step-kpi"><div class="label">핵심 지표</div><div class="value">미거래 전환 5%+</div><div class="desc">이벤트 후 거래 집계</div></div>
+              <div class="step-kpi">
+                <div class="label">핵심 지표</div>
+                <div class="value">미거래 전환 5%+</div>
+                <div class="desc">이벤트 후 거래 집계</div>
+              </div>
             </div>
             <div class="strategy-step red">
               <div class="step-no">4단계 · Reactivation</div>
               <div class="step-title">휴면 재활성</div>
-              <div class="step-channel">💬 카카오톡 채널</div>
+              <div class="step-channel">카카오톡 채널</div>
               <div class="step-role">거래 경험 고객의 이탈을 막고 재구매를 유지하는 단계. 큐레이션·환율·기획 메시지 활용</div>
-              <div class="step-kpi"><div class="label">핵심 지표</div><div class="value">CTR +10~20%</div><div class="desc">기존 카카오 성과 대비</div></div>
+              <div class="step-kpi">
+                <div class="label">핵심 지표</div>
+                <div class="value">CTR +10~20%</div>
+                <div class="desc">기존 카카오 성과 대비</div>
+              </div>
             </div>
           </div>
           <div class="strategy-bottleneck">
-            <strong>분석:</strong> 현재 병목은 유입 채널보다 <strong>마케팅 접점 부족(85%)</strong>과 <strong>전환 트리거 부재</strong>입니다 — 상단 퍼널 확장보다 유입 이후 카카오 전환 설계가 먼저 맞물려야 합니다.
-          </div>
-        </div>
-        <div class="strategy-summary-card">
-          <h3 style="margin:0 0 4px;">채널 역할 분리</h3>
-          <div class="panel-sub" style="margin-bottom:12px;">단계별 역할을 분리해 중복 집행을 줄입니다</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
-            <table class="strategy-summary-table" style="margin-top:0;">
-              <thead><tr><th>단계</th><th>인플루언서</th><th>블로그</th><th>카카오</th></tr></thead>
-              <tbody>
-                <tr><td>인지</td><td><span class="strategy-dot on blue">●</span></td><td><span class="strategy-dot on blue">●</span></td><td><span class="strategy-dot off">–</span></td></tr>
-                <tr><td>유입</td><td><span class="strategy-dot on amber">●</span></td><td><span class="strategy-dot on amber">●</span></td><td><span class="strategy-dot off">–</span></td></tr>
-                <tr><td>전환</td><td><span class="strategy-dot off">–</span></td><td><span class="strategy-dot off">–</span></td><td><span class="strategy-dot on green">●</span></td></tr>
-                <tr><td>재활성</td><td><span class="strategy-dot off">–</span></td><td><span class="strategy-dot off">–</span></td><td><span class="strategy-dot on red">●</span></td></tr>
-              </tbody>
-            </table>
-            <div class="strategy-kpi-stack" style="margin-top:0;">
-              <div class="strategy-kpi-item"><div class="top"><div class="name">카카오 도달 가능 회원</div><div class="val">15%</div></div><div class="sub">3만명 중 4,500명 — 미접점 85%</div></div>
-              <div class="strategy-kpi-item"><div class="top"><div class="name">블로그 유입 목표</div><div class="val">500+/월</div></div><div class="sub">3개월 내 달성 기준</div></div>
-              <div class="strategy-kpi-item"><div class="top"><div class="name">미거래 전환 목표</div><div class="val">5%+</div></div><div class="sub">기가입 미거래 세그먼트 기준</div></div>
-              <div class="strategy-kpi-item"><div class="top"><div class="name">카카오 CTR 개선</div><div class="val">+10~20%</div></div><div class="sub">기존 발송 성과 대비</div></div>
-            </div>
-          </div>
-          <div class="insight blue" style="margin-top:12px;">
-            <strong>분석:</strong> 전체 회원 3만명 중 실제 채널 도달 고객은 15%에 불과합니다 — 확보된 고객 자산을 충분히 활용하지 못하고 있는 구조로, 우선적으로 카카오 접점 확대와 세그먼트 전환 설계가 필요합니다.
+            <strong>분석:</strong> 현재 병목은 유입 채널보다 <strong>전환 트리거 부재</strong>입니다 — 상단 퍼널 확장보다 유입 이후 카카오 전환 설계가 먼저 맞물려야 합니다.
           </div>
         </div>
       </div>
@@ -595,288 +764,226 @@ a{text-decoration:none}
 <section class="slide" id="slide5">
   <div class="container">
     <div class="card slide-card">
-      <span class="kicker">05 · Expected Outcomes</span>
+      <span class="kicker">05 · Search Strategy</span>
       <div class="title-row">
         <div>
-          <div class="h2">마케팅 실행 시 기대 성과 6가지</div>
-          <div class="subtitle">현황 수치 → 목표 수치, 각 지표의 변화를 한눈에 확인합니다.</div>
+          <div class="h2">키워드 재구성만으로 CTR +1.75%p, 예산 확대 시 클릭 2배</div>
+          <div class="subtitle">비효율 키워드 정리 후 전환 의도형으로 재배분 — 예산 50만 → 80만원 시 클릭 1,000건 돌파가 가능합니다.</div>
         </div>
         <div class="page-no">5 / 10</div>
       </div>
 
-      <!-- 상단 3개 -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;">
-        <div style="border:2px solid var(--blue);border-radius:18px;background:#fff;padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
-          <span style="font-size:10px;font-weight:800;letter-spacing:.07em;padding:3px 10px;border-radius:999px;background:var(--soft-blue);color:var(--blue);">① 신규 유입</span>
-          <div style="font-size:13px;font-weight:800;color:var(--text);">월 클릭수</div>
-          <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">현재</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:#9ca3af;">477건</div></div>
-            <div style="font-size:22px;color:var(--blue);font-weight:900;">→</div>
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">목표</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:var(--blue);">1,000건</div></div>
-          </div>
-          <div style="font-size:20px;font-weight:900;color:var(--blue);">×2.1</div>
-          <div style="font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5;">* 키워드 재구성 + 예산 30→80만원 · 블로그 월 500명 추가 시 합산 1,500건+ 가능</div>
+      <!-- 상단 KPI 4개 — 2025 연간 실적 -->
+      <div class="kpi-row-h" style="margin-top:18px;">
+        <div class="metric soft-red">
+          <div class="label">연간 총 광고비</div>
+          <div class="value">460만원</div>
+          <div class="desc">2025년 실집행 · 월 평균 38만원</div>
         </div>
-
-        <div style="border:2px solid var(--green);border-radius:18px;background:#fff;padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
-          <span style="font-size:10px;font-weight:800;letter-spacing:.07em;padding:3px 10px;border-radius:999px;background:var(--soft-green);color:var(--green);">② 거래 매출</span>
-          <div style="font-size:13px;font-weight:800;color:var(--text);">월 거래 건수 증가율</div>
-          <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">현재</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:#9ca3af;">+0%</div></div>
-            <div style="font-size:22px;color:var(--green);font-weight:900;">→</div>
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">목표</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:var(--green);">+1.5%</div></div>
-          </div>
-          <div style="font-size:20px;font-weight:900;color:var(--green);">+97.5건/월</div>
-          <div style="font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5;">* 수수료 2안 손실 회복 기준선 · 마케팅 유입으로 구조적 달성 가능</div>
+        <div class="metric soft-amber">
+          <div class="label">연간 평균 CPC</div>
+          <div class="value">804원</div>
+          <div class="desc">목표 600원 · -25% 개선 필요</div>
         </div>
-
-        <div style="border:2px solid var(--red);border-radius:18px;background:#fff;padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
-          <span style="font-size:10px;font-weight:800;letter-spacing:.07em;padding:3px 10px;border-radius:999px;background:var(--soft-red);color:var(--red);">③ VIP 복귀</span>
-          <div style="font-size:13px;font-weight:800;color:var(--text);">이탈 VIP 복귀 수</div>
-          <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">현재</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:#9ca3af;">27명</div></div>
-            <div style="font-size:22px;color:var(--red);font-weight:900;">→</div>
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">목표</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:var(--red);">10명</div></div>
-          </div>
-          <div style="font-size:20px;font-weight:900;color:var(--red);">연 2,760만원 방어</div>
-          <div style="font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5;">* 복귀 10명 × 월 22건 기준 월 약 230만원 수익 회복</div>
+        <div class="metric soft-blue">
+          <div class="label">연간 총 클릭수</div>
+          <div class="value">5,726건</div>
+          <div class="desc">월 평균 477건 · 목표 1,000건</div>
+        </div>
+        <div class="metric soft-red">
+          <div class="label">모바일 클릭 비중</div>
+          <div class="value">73%</div>
+          <div class="desc">노출 76% · 비용 72% 모바일 집중</div>
         </div>
       </div>
 
-      <!-- 하단 3개 -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;">
-        <div style="border:2px solid var(--amber);border-radius:18px;background:#fff;padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
-          <span style="font-size:10px;font-weight:800;letter-spacing:.07em;padding:3px 10px;border-radius:999px;background:var(--soft-amber);color:var(--amber);">④ 고객 만족도</span>
-          <div style="font-size:13px;font-weight:800;color:var(--text);">만족도 상승</div>
-          <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">현재</div><div style="font-size:28px;font-weight:900;letter-spacing:-.03em;color:#9ca3af;">미측정</div></div>
-            <div style="font-size:22px;color:var(--amber);font-weight:900;">→</div>
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">목표</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:var(--amber);">+15%p</div></div>
+      <div class="two-col">
+
+        <!-- 좌: 키워드 진단 -->
+        <div class="stack">
+
+          <div class="panel">
+            <h3>효과 키워드 TOP 5 — 유지·확대 대상</h3>
+            <div class="panel-sub">CTR 또는 클릭수 기준 연간 안정 운영 키워드</div>
+            <table class="compare-table" style="margin-top:12px;">
+              <thead>
+                <tr><th>키워드</th><th>CTR</th><th>CPC</th><th>분기 트렌드</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>일본경매대행</strong></td>
+                  <td><span class="pill green">10.2%</span></td>
+                  <td>3,097원</td>
+                  <td>Q3 최고 · 전환 의도 최상위</td>
+                </tr>
+                <tr>
+                  <td><strong>이베이경매대행</strong></td>
+                  <td><span class="pill green">10.5%</span></td>
+                  <td>165원</td>
+                  <td>저비용 고CTR · 예산 즉시 확대 권장</td>
+                </tr>
+                <tr>
+                  <td><strong>야후경매대행</strong></td>
+                  <td><span class="pill green">9.1%</span></td>
+                  <td>940원</td>
+                  <td>Q4 급증 · 성장 추세</td>
+                </tr>
+                <tr>
+                  <td><strong>세이코시계</strong></td>
+                  <td><span class="pill blue">0.2%</span></td>
+                  <td>447원</td>
+                  <td>연간 클릭 1위(733건) · 저CPC 효율</td>
+                </tr>
+                <tr>
+                  <td><strong>일본중고</strong></td>
+                  <td><span class="pill blue">5.7%</span></td>
+                  <td>1,191원</td>
+                  <td>중고 수요 견고 · Q3 시즌성 확인</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div style="font-size:20px;font-weight:900;color:var(--amber);">1년 내 달성</div>
-          <div style="font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5;">* 12월 설문 실시 (6개월/연 1회 리워드 제공) → 내년 동기 대비 15%p 상승 목표</div>
+
+          <div class="panel">
+            <h3>정리 대상 키워드 — 예산 낭비 구조</h3>
+            <div class="panel-sub">노출은 많으나 CTR 극저 · 비용 대비 클릭 없음</div>
+            <table class="compare-table" style="margin-top:12px;">
+              <thead>
+                <tr><th>키워드</th><th>연 노출</th><th>CTR</th><th>판단</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>트레이더조</strong></td>
+                  <td>145,627</td>
+                  <td><span class="pill red">0.04%</span></td>
+                  <td>노출 낭비 · 즉시 정리</td>
+                </tr>
+                <tr>
+                  <td><strong>트레이더조에코백</strong></td>
+                  <td>108,278</td>
+                  <td><span class="pill red">0.03%</span></td>
+                  <td>타겟 불명확 · 삭제</td>
+                </tr>
+                <tr>
+                  <td><strong>이베이경매 (클릭0)</strong></td>
+                  <td>246</td>
+                  <td><span class="pill red">0%</span></td>
+                  <td>클릭 0건 · 즉시 삭제</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="insight red" style="margin-top:10px;">
+              <strong>분석:</strong> 트레이더조 2개 키워드만 정리해도 연간 노출 253,905건의 낭비를 제거<br>해당 예산을 고CTR 키워드로 재배분 시 클릭 효율을 개선합니다.
+            </div>
+          </div>
+
         </div>
 
-        <div style="border:2px solid var(--navy);border-radius:18px;background:#fff;padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
-          <span style="font-size:10px;font-weight:800;letter-spacing:.07em;padding:3px 10px;border-radius:999px;background:#f1f5f9;color:var(--navy);">⑤ 1인당 구매 건수</span>
-          <div style="font-size:13px;font-weight:800;color:var(--text);">재구매 횟수</div>
-          <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">현재</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:#9ca3af;">1건</div></div>
-            <div style="font-size:22px;color:var(--navy);font-weight:900;">→</div>
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">목표</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:var(--navy);">2건+</div></div>
-          </div>
-          <div style="font-size:20px;font-weight:900;color:var(--navy);">이탈율 44.9% → 개선</div>
-          <div style="font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5;">* 마일리지 60일 소멸 구조가 재구매 트리거로 작동</div>
-        </div>
+        <!-- 우: 신규 키워드 + 카피 전략 -->
+        <div class="stack">
 
-        <div style="border:2px solid var(--green);border-radius:18px;background:#fff;padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
-          <span style="font-size:10px;font-weight:800;letter-spacing:.07em;padding:3px 10px;border-radius:999px;background:var(--soft-green);color:var(--green);">⑥ 신규 이탈율</span>
-          <div style="font-size:13px;font-weight:800;color:var(--text);">첫 구매 후 이탈율</div>
-          <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">현재</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:#9ca3af;">63.6%</div></div>
-            <div style="font-size:22px;color:var(--green);font-weight:900;">→</div>
-            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">목표</div><div style="font-size:32px;font-weight:900;letter-spacing:-.03em;color:var(--green);">55%↓</div></div>
+          <div class="panel">
+            <h3>신규 키워드 3방향</h3>
+            <div class="panel-sub">롱테일 확장 · 전환 의도형 · 카테고리 특화</div>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-top:12px;">
+
+              <div style="padding:12px 14px; border-radius:12px; background:var(--soft-blue); border-left:3px solid var(--soft-blue);">
+                <div style="font-size:12px; font-weight:700; color:#1e40af; margin-bottom:6px;">브랜드 + 카테고리형</div>
+                <div style="font-size:12px; color:#1e3a8a; line-height:1.7;">
+                  세이코 빈티지 시계 경매 · 그랜드세이코 중고 직구<br>
+                  혼마 골프채 중고 일본 · 폴로 랄프로렌 빈티지 직구
+                </div>
+                <div style="margin-top:6px; font-size:11px; color:#1e40af; font-weight:700;">→ 구매 의도 명확한 고관여 유입</div>
+              </div>
+
+              <div style="padding:12px 14px; border-radius:12px; background:var(--soft-amber); border-left:3px solid var(--soft-amber);">
+                <div style="font-size:12px; font-weight:700; color:#92400e; margin-bottom:6px;">질문·문장형 롱테일</div>
+                <div style="font-size:12px; color:#78350f; line-height:1.7;">
+                  야후옥션 입찰하는 방법 · 일본 경매 대행 수수료 싼곳<br>
+                  메르카리 한국에서 사는 법 · 해외 경매 낙찰 물건 관세
+                </div>
+                <div style="margin-top:6px; font-size:11px; color:#92400e; font-weight:700;">→ 정보 탐색 고객 · 블로그 이중 노출 효과</div>
+              </div>
+
+              <div style="padding:12px 14px; border-radius:12px; background:var(--soft-green); border-left:3px solid var(--soft-green);">
+                <div style="font-size:12px; font-weight:700; color:#166534; margin-bottom:6px;">메루카리 특화</div>
+                <div style="font-size:12px; color:#14532d; line-height:1.7;">
+                  메르카리 구매대행 · MERCARI 직구<br>
+                  메르카리 구매대행 사이트 추천
+                </div>
+                <div style="margin-top:6px; font-size:11px; color:#166534; font-weight:700;">→ Q3 신규 안착 · Q4 클릭 성장 중 · 확대 여력 있음</div>
+              </div>
+
+            </div>
           </div>
-          <div style="font-size:20px;font-weight:900;color:var(--green);">-8.6%p</div>
-          <div style="font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;line-height:1.5;">* 첫 구매 완료 시 3,000 마일리지 즉시 지급 → 2번째 거래 유인</div>
+
+          <div class="panel">
+            <h3>광고 카피 재설계</h3>
+            <div class="panel-sub">CTR 상승 · CPC 감소 목표 — 그룹별 A/B 테스트 진행</div>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-top:12px;">
+              <div style="padding:10px 13px; border-radius:10px; background:var(--soft-gray); border:1px solid var(--line);">
+                <div style="font-size:11px; color:var(--muted); margin-bottom:4px;">구매대행 소구</div>
+                <div style="font-size:13px; color:var(--text); line-height:1.55;">일본 구매대행 25년 노하우 — 검수·합배송까지 안전하게<br>
+                <span style="color:var(--blue); font-weight:700;">대행수수료 500엔부터 시작</span></div>
+              </div>
+              <div style="padding:10px 13px; border-radius:10px; background:var(--soft-gray); border:1px solid var(--line);">
+                <div style="font-size:11px; color:var(--muted); margin-bottom:4px;">경매 소구</div>
+                <div style="font-size:13px; color:var(--text); line-height:1.55;">경매대행 500엔부터 가능 · 일본 직구 25년 서비스<br>
+                <span style="color:var(--blue); font-weight:700;">부담없이 시작하는 일본 구매대행</span></div>
+              </div>
+              <div style="padding:10px 13px; border-radius:10px; background:var(--soft-gray); border:1px solid var(--line);">
+                <div style="font-size:11px; color:var(--muted); margin-bottom:4px;">헤리티지 소구</div>
+                <div style="font-size:13px; color:var(--text); line-height:1.55;">당일통관 빠른 배송 · 일본 직구 25년 서비스<br>
+                <span style="color:var(--blue); font-weight:700;">시계·골프·부품까지 경매대행 500엔부터</span></div>
+              </div>
+            </div>
+            <div class="insight blue" style="margin-top:10px;">
+              <strong>분석:</strong> 25년 업력(헤리티지) + 500엔 저단가를 동시 소구
+            </div>
+          </div>
+          <div class="mkt-cta-wrap">
+            <div class="mkt-cta-text">
+              <strong>📄 2025 네이버 키워드 분석 차트</strong>
+              국가별 시장 집중도 및 비효율 키워드 분석
+            </div>
+            <a href="https://bidbuycs.github.io/marketing_Visualize/" target="_blank" class="mkt-cta-btn">
+              상세 제안서 보기 →
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="insight blue" style="margin-top:18px;">
-        <strong>분석:</strong> 6개 지표는 독립이 아닌 연결 구조입니다 — 신규 유입 → 첫 구매 마일리지 → 재구매 → 등급 상승 → VIP 락인의 순환이 완성될 때 비로소 안정적인 성장 구조가 만들어집니다.
-      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
-     SLIDE 6 · Launch Event
+     SLIDE 6 · KakaoTalk + Content
 ════════════════════════════════════════════════════════ -->
 <section class="slide" id="slide6">
   <div class="container">
     <div class="card slide-card">
-      <span class="kicker">06 · Launch Event</span>
-      <div class="title-row">
-        <div>
-          <div class="h2">리뉴얼 론칭 이벤트: 4주 세그먼트 구조</div>
-          <div class="subtitle">D-30일 사전 커뮤니케이션부터 시작해 신규·복귀·미거래를 동시에 공략하고, 오픈 시점 전환 성과를 극대화합니다.</div>
-        </div>
-        <div class="page-no">6 / 10</div>
-      </div>
-      <div class="two-col">
-        <div class="panel">
-          <h3>이벤트 비용 시나리오 (마일리지 5,000원 기준)</h3>
-          <div class="panel-sub">카카오 4,500명 + 사이트 배너/팝업 기반 추정</div>
-          <div class="chart-wrap short"><canvas id="eventChart"></canvas></div>
-          <div class="flow-rows">
-            <div class="flow-row"><div><strong>보수적</strong> <span class="pill green">최소</span></div><div class="flow-bar"><div class="flow-fill" style="width:48%;background:var(--green)"></div></div><div><strong>357만원</strong></div></div>
-            <div class="flow-row"><div><strong>중간</strong> <span class="pill blue">권장</span></div><div class="flow-bar"><div class="flow-fill" style="width:68%;background:var(--blue)"></div></div><div><strong>510만원</strong></div></div>
-            <div class="flow-row"><div><strong>최대</strong> <span class="pill amber">공격적</span></div><div class="flow-bar"><div class="flow-fill" style="width:100%;background:var(--amber)"></div></div><div><strong>750만원</strong></div></div>
-          </div>
-        </div>
-        <div class="stack">
-          <div class="panel">
-            <h3>세그먼트별 메시지 전략</h3>
-            <table class="compare-table">
-              <thead><tr><th>대상</th><th>핵심 메시지</th></tr></thead>
-              <tbody>
-                <tr><td><span class="pill blue">신규</span></td><td>리뉴얼 오픈 — 지금이 가장 유리한 조건입니다</td></tr>
-                <tr><td><span class="pill amber">기가입·미거래</span></td><td>수수료 구조가 바뀌었습니다 — 첫 거래 시작할 타이밍입니다</td></tr>
-                <tr><td><span class="pill green">복귀</span></td><td>더 나은 조건으로 돌아올 수 있습니다</td></tr>
-                <tr><td><span class="pill red">기존 활성</span></td><td>리뉴얼 이후 더 편리해진 환경 — 변경사항을 확인해보세요</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="panel">
-            <h3>예상 도달 추정 (중간 시나리오)</h3>
-            <div class="three-col" style="margin-top:12px;">
-              <div class="metric soft-blue"><div class="label">카카오 경로</div><div class="value" style="font-size:20px;">315~900명</div><div class="desc">4,500명 × 10~20% × 70~80%</div></div>
-              <div class="metric soft-green"><div class="label">사이트 경로</div><div class="value" style="font-size:20px;">~600명</div><div class="desc">일 활성·배너 기준</div></div>
-              <div class="metric soft-amber"><div class="label">합산 추정</div><div class="value" style="font-size:20px;">715~1,500명</div><div class="desc">보수적~최대 범위</div></div>
-            </div>
-            <div class="insight amber" style="margin-top:12px;">
-              <strong>분석:</strong> 사이트 접속 고객까지 포함하면 카카오 미구독 회원도 이벤트 도달이 가능합니다 — 배너·팝업 설계가 카카오만큼 중요합니다.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 7 · KakaoTalk + Content
-════════════════════════════════════════════════════════ -->
-<section class="slide" id="slide7">
-  <div class="container">
-    <div class="card slide-card">
-      <span class="kicker">07 · KakaoTalk + Content</span>
-      <div class="title-row">
-        <div>
-          <div class="h2">카카오 5단계 시퀀스 + 블로그 4시리즈</div>
-          <div class="subtitle">카카오는 D-Day 전후 타이밍 기반 발송으로 전환을, 블로그는 키워드 중심 정기 발행으로 신규 유입을 담당합니다.</div>
-        </div>
-        <div class="page-no">7 / 10</div>
-      </div>
-      <div class="two-col">
-        <div class="panel">
-          <h3>카카오톡 발송 타임라인</h3>
-          <div class="panel-sub">D-Day(리뉴얼 오픈) 기준 전후 5단계 시퀀스</div>
-          <table class="compare-table">
-            <thead><tr><th>시점</th><th>유형</th><th>핵심 메시지</th></tr></thead>
-            <tbody>
-              <tr><td><strong>D-30일</strong></td><td><span class="pill blue">예고</span></td><td>수수료·UI 개편 예고, 기대감 형성</td></tr>
-              <tr><td><strong>D-7일</strong></td><td><span class="pill amber">카운트다운</span></td><td>"7일 후 오픈" + 핵심 변경 3가지</td></tr>
-              <tr><td><strong>D-Day</strong></td><td><span class="pill green">세그먼트 발송</span></td><td>신규·복귀·미거래·활성 맞춤 문구</td></tr>
-              <tr><td><strong>D+21일</strong></td><td><span class="pill red">마감 리마인드</span></td><td>"이벤트 종료 D-3일" 긴박감</td></tr>
-              <tr><td><strong>이후 정기</strong></td><td><span class="pill navy">정기 큐레이션</span></td><td>주간 매물·환율 알림·시즌 기획</td></tr>
-            </tbody>
-          </table>
-          <div class="insight amber">
-            <strong>분석:</strong> 12월 CTR 11% vs 1월 CTR 2.8% — 콘텐츠 타이밍과 리워드 유무가 핵심 변수입니다. 시퀀스 설계로 월별 편차를 구조적으로 줄입니다.
-          </div>
-        </div>
-        <div class="panel">
-          <h3>네이버 블로그 4시리즈 전략</h3>
-          <div class="panel-sub">월 4건 정기 발행 · AI 초안 + 담당자 검수 반자동화</div>
-          <table class="compare-table">
-            <thead><tr><th>시리즈</th><th>주제</th><th>타겟</th></tr></thead>
-            <tbody>
-              <tr><td><strong>[1엔의 행복]</strong></td><td>실제 낙찰 사례 + 국내 시세 비교</td><td>경매 입문 고민자</td></tr>
-              <tr><td><strong>[가격 비교]</strong></td><td>중고나라 vs 메루카리 실가격</td><td>브랜드 매니아</td></tr>
-              <tr><td><strong>[직구 마스터]</strong></td><td>야후옥션 사기 필터링·배송 노하우</td><td>해외 직구 초보자</td></tr>
-              <tr><td><strong>[마케터 체험]</strong></td><td>5만원 예산 체험기 과정 공개</td><td>직구 흥미 고객층</td></tr>
-            </tbody>
-          </table>
-          <div class="insight green">
-            <strong>분석:</strong> 키워드 우선 설계 → 반자동화 발행 → 포스팅 하단 비드바이 CTA 삽입 — 목표: 3개월 내 월 유입 500명+
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 8 · Search Strategy
-════════════════════════════════════════════════════════ -->
-<section class="slide" id="slide8">
-  <div class="container">
-    <div class="card slide-card">
-      <span class="kicker">08 · Search Strategy</span>
-      <div class="title-row">
-        <div>
-          <div class="h2">키워드 재구성만으로 CTR +1.75%p, 예산 확대 시 클릭 2배</div>
-          <div class="subtitle">비효율 키워드 정리 후 전환 의도형으로 재배분 — 예산 30만 → 80만원 시 클릭 1,000건 돌파가 가능합니다.</div>
-        </div>
-        <div class="page-no">8 / 10</div>
-      </div>
-      <div class="two-col">
-        <div class="panel">
-          <h3>광고 성과 목표 (Before → After)</h3>
-          <div class="panel-sub">키워드 재구성 + 예산 증액(30만→80만원) 기대치</div>
-          <div class="chart-wrap"><canvas id="naverChart"></canvas></div>
-          <div class="three-col" style="margin-top:12px;">
-            <div class="metric soft-blue"><div class="label">CTR 목표</div><div class="value" style="font-size:22px;">3.8%</div><div class="desc">현행 2.05% → <strong>+1.75%p</strong></div></div>
-            <div class="metric soft-green"><div class="label">CPC 목표</div><div class="value" style="font-size:22px;">600원</div><div class="desc">현행 804원 → <strong>-25%</strong></div></div>
-            <div class="metric soft-amber"><div class="label">월 클릭 목표</div><div class="value" style="font-size:22px;">1,000건</div><div class="desc">현행 477건 → <strong>×2.1</strong></div></div>
-          </div>
-          <div class="small-note">* CTR·CPC는 키워드 재구성만으로도 개선 가능 / 클릭수는 예산 80만원 기준</div>
-        </div>
-        <div class="stack">
-          <div class="panel">
-            <h3>신규 키워드 3방향</h3>
-            <table class="compare-table">
-              <thead><tr><th>유형</th><th>예시</th><th>목적</th></tr></thead>
-              <tbody>
-                <tr><td><span class="pill blue">브랜드+카테고리형</span></td><td>세이코 빈티지 시계 경매</td><td>구매 의도 명확한 고관여 유입</td></tr>
-                <tr><td><span class="pill amber">질문·문장형</span></td><td>야후옥션 입찰하는 방법</td><td>정보 탐색 고객 · 블로그-광고 이중 노출</td></tr>
-                <tr><td><span class="pill green">메루카리 특화</span></td><td>메루카리 구매대행</td><td>고CPC 직구 키워드 대비 효율 높은 대안</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="panel">
-            <h3>지식인 / 커뮤니티 운영</h3>
-            <div class="three-col" style="margin-top:12px;">
-              <div class="metric"><div class="label">운영 빈도</div><div class="value" style="font-size:20px;">주 2~3회</div><div class="desc">탄력 운영</div></div>
-              <div class="metric soft-blue"><div class="label">접근 방식</div><div class="value" style="font-size:20px;">성실 답변</div><div class="desc">직구 질문 → 자연 언급</div></div>
-              <div class="metric soft-green"><div class="label">역할</div><div class="value" style="font-size:20px;">신뢰 구축</div><div class="desc">광고 없이 브랜드 노출</div></div>
-            </div>
-          </div>
-          <div class="insight blue">
-            <strong>분석:</strong> 키워드 재구성 이후 예산을 30만 → 80만원으로 확대하면 클릭 수는 구조적으로 2배 이상 증가합니다.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 9 · Influencer Strategy
-════════════════════════════════════════════════════════ -->
-<section class="slide" id="slide9">
-  <div class="container">
-    <div class="card slide-card">
-      <span class="kicker">09 · Influencer Strategy</span>
+      <span class="kicker">06 · Influencer Strategy</span>
       <div class="title-row">
         <div>
           <div class="h2">마이크로 인플루언서: 성과 기반 단계적 확장</div>
           <div class="subtitle">초기 소형 인플루언서 테스트 후 성과 검증 → 중형 확대 순서로 리스크를 줄이며 유입 채널을 구축합니다.</div>
         </div>
-        <div class="page-no">9 / 10</div>
+        <div class="page-no">6 / 10</div>
       </div>
+
+      <!-- Tier 카드 3개 -->
       <div class="tier-grid">
         <div class="tier-card t1">
           <div class="tier-name">TIER 1 · 소형</div>
           <div class="tier-range">구독자 3천~1만명</div>
           <div class="tier-price">월 30~50만원</div>
           <div class="tier-list">
-            <div>• 월 1개 이상 (영상 또는 쇼츠)</div>
-            <div>• 구독자 전용 쿠폰 지급</div>
-            <div>• 영상 내 최소 3회 언급</div>
-            <div>• 설명란 비드바이 링크 + 추천코드</div>
-            <div style="margin-top:8px;color:var(--green);font-weight:700">▶ 첫 3개월 2~3명 테스트</div>
+            <div>· 월 1개 이상 (영상 또는 쇼츠)</div>
+            <div>· 구독자 전용 쿠폰 지급</div>
+            <div>· 영상 내 최소 3회 언급</div>
+            <div>· 설명란 비드바이 링크 + 추천코드</div>
+            <div style="margin-top:8px; color:var(--green); font-weight:700;">▶ 첫 3개월 2~3명 테스트 · 월 정기 예산 내 집행</div>
           </div>
         </div>
         <div class="tier-card t2">
@@ -884,11 +991,11 @@ a{text-decoration:none}
           <div class="tier-range">구독자 1만~5만명</div>
           <div class="tier-price">월 70~100만원</div>
           <div class="tier-list">
-            <div>• 월 1~2개 이상 (영상 또는 쇼츠)</div>
-            <div>• 전용 추천코드 발급</div>
-            <div>• 3개월 후 성과 리뷰 → 갱신 협의</div>
-            <div>• 성과 우수 시 지원금 증액</div>
-            <div style="margin-top:8px;color:var(--blue);font-weight:700">▶ TIER 1 성과 확인 후 확대</div>
+            <div>· 월 1~2개 이상 (영상 또는 쇼츠)</div>
+            <div>· 전용 추천코드 발급</div>
+            <div>· 3개월 후 성과 리뷰 → 갱신 협의</div>
+            <div>· 성과 우수 시 지원금 증액</div>
+            <div style="margin-top:8px; color:var(--blue); font-weight:700;">▶ TIER 1 성과 확인 후 확대</div>
           </div>
         </div>
         <div class="tier-card t3">
@@ -896,27 +1003,52 @@ a{text-decoration:none}
           <div class="tier-range">구독자 5만~15만명</div>
           <div class="tier-price">월 120~180만원</div>
           <div class="tier-list">
-            <div>• 월 2개 이상 (영상+쇼츠)</div>
-            <div>• 쇼츠 72시간 조회수 성과 기준</div>
-            <div>• 2개월 연속 미이행 시 해지</div>
-            <div>• 물품 인수 후 1개월 이내 업로드</div>
-            <div style="margin-top:8px;color:var(--amber);font-weight:700">▶ 성과 검증 이후 도입</div>
+            <div>· 월 2개 이상 (영상+쇼츠)</div>
+            <div>· 쇼츠 72시간 조회수 성과 기준</div>
+            <div>· 2개월 연속 미이행 시 해지</div>
+            <div>· 물품 인수 후 1개월 이내 업로드</div>
+            <div style="margin-top:8px; color:var(--amber); font-weight:700;">▶ 성과 검증 이후 도입 · 별도 예산 편성 필요</div>
           </div>
         </div>
       </div>
+
       <div class="two-col">
+
+        <!-- 좌: 선정 기준 -->
         <div class="panel">
           <h3>인플루언서 선정 기준</h3>
-          <table class="compare-table">
+          <div class="panel-sub">콘텐츠 연관성과 팬층 충성도를 최우선 기준으로 선정</div>
+          <table class="compare-table" style="margin-top:12px;">
             <thead><tr><th>기준</th><th>상세</th><th>비고</th></tr></thead>
             <tbody>
-              <tr><td><strong>구독자 규모</strong></td><td>3천~15만명</td><td>쇼츠 전문 채널 포함</td></tr>
-              <tr><td><strong>평균 조회수</strong></td><td>구독자 대비 10% / 쇼츠 1,000뷰+</td><td>최근 영상 직접 확인</td></tr>
-              <tr><td><strong>콘텐츠 연관성</strong></td><td>일본 직구·경매·중고 관련 30% 이상</td><td>일반 브이로그 제외</td></tr>
-              <tr><td><strong>댓글 반응</strong></td><td>"어디서 샀어요?" 등 구매 관련 댓글 확인</td><td>팬층 충성도 핵심 지표</td></tr>
+              <tr>
+                <td><strong>구독자 규모</strong></td>
+                <td>3천~15만명</td>
+                <td>쇼츠 전문 채널 포함</td>
+              </tr>
+              <tr>
+                <td><strong>평균 조회수</strong></td>
+                <td>구독자 대비 10% / 쇼츠 1,000뷰+</td>
+                <td>최근 영상 직접 확인</td>
+              </tr>
+              <tr>
+                <td><strong>콘텐츠 연관성</strong></td>
+                <td>일본 직구·경매·중고 관련 30% 이상</td>
+                <td>일반 브이로그 제외</td>
+              </tr>
+              <tr>
+                <td><strong>댓글 반응</strong></td>
+                <td>"어디서 샀어요?" 등 구매 관련 댓글 확인</td>
+                <td>팬층 충성도 핵심 지표</td>
+              </tr>
             </tbody>
           </table>
+          <div class="insight blue" style="margin-top:12px;">
+            * 구독자 수보다 <strong>콘텐츠 연관성과 댓글 반응</strong>이 전환율에 직결됩니다<br>일본 상품 관련 채널에서 구매 의향 댓글이 확인된 인플루언서를 최우선 선정합니다.
+          </div>
         </div>
+
+        <!-- 우: 론칭 타임라인 -->
         <div class="panel">
           <h3>론칭 타임라인</h3>
           <table class="compare-table">
@@ -933,95 +1065,535 @@ a{text-decoration:none}
             <strong>분석:</strong> 인플루언서 노출을 리뉴얼 이전부터 시작해 오픈 시점에 전환이 집중되도록 사전 유입을 형성합니다.
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
-     SLIDE 10 · Budget + KPI
+     SLIDE 7 · Launch Event
 ════════════════════════════════════════════════════════ -->
-<section class="slide" id="slide10">
+<section class="slide" id="slide7">
   <div class="container">
     <div class="card slide-card">
-      <span class="kicker">10 · Budget + KPI + Next Steps</span>
+      <span class="kicker">07 · Launch Event + Budget</span>
       <div class="title-row">
         <div>
-          <div class="h2">월 170만원 투자, 3채널 성과 구조</div>
-          <div class="subtitle">현행 30만원 대비 +467% — 유입·전환·재구매가 연결되는 구조를 만드는 투자입니다.</div>
+          <div class="h2">3채널 실행 요약 · 론칭 이벤트 + 정기 운영 예산</div>
+          <div class="subtitle">채널별 역할 분리 → 론칭 이벤트로 전환 극대화 → 월 정기 운영으로 지속 성장 구조를 완성합니다.</div>
         </div>
-        <div class="page-no">10 / 10</div>
+        <div class="page-no">7 / 10</div>
       </div>
+
+      <!-- 상단: 3채널 요약 -->
+      <div style="margin-top:18px; display:grid; grid-template-columns:repeat(3,1fr); gap:10px;">
+        <div style="padding:14px 16px; border-radius:14px; border:1px solid var(--line); border-top:3px solid var(--blue); background:#fff;">
+          <div style="font-size:11px; font-weight:800; color:var(--blue); letter-spacing:.07em; margin-bottom:6px;">CH 01 · 카카오톡</div>
+          <div style="font-size:14px; font-weight:900; color:var(--text); margin-bottom:6px;">전환 · 재활성</div>
+          <div style="font-size:12px; color:var(--muted); line-height:1.6;">4,500명 구독자 대상 · D-Day 세그먼트 발송 · VIP 복귀 시퀀스 · 정기 큐레이션</div>
+          <div style="margin-top:8px; font-size:12px; font-weight:700; color:var(--blue);">즉시 실행 가능</div>
+        </div>
+        <div style="padding:14px 16px; border-radius:14px; border:1px solid var(--line); border-top:3px solid var(--green); background:#fff;">
+          <div style="font-size:11px; font-weight:800; color:var(--green); letter-spacing:.07em; margin-bottom:6px;">CH 02 · 블로그 + 검색광고</div>
+          <div style="font-size:14px; font-weight:900; color:var(--text); margin-bottom:6px;">인지 · 신규 유입</div>
+          <div style="font-size:12px; color:var(--muted); line-height:1.6;">4시리즈 월 정기 발행 · 효과 키워드 유지·확대 · 비효율 키워드 정리 · 카피 A/B 테스트</div>
+          <div style="margin-top:8px; font-size:12px; font-weight:700; color:var(--green);">예산 승인 후 실행</div>
+        </div>
+        <div style="padding:14px 16px; border-radius:14px; border:1px solid var(--line); border-top:3px solid var(--amber); background:#fff;">
+          <div style="font-size:11px; font-weight:800; color:var(--amber); letter-spacing:.07em; margin-bottom:6px;">CH 03 · 인플루언서</div>
+          <div style="font-size:14px; font-weight:900; color:var(--text); margin-bottom:6px;">브랜드 인지 확장</div>
+          <div style="font-size:12px; color:var(--muted); line-height:1.6;">Tier 1 소형 2~3명 테스트 · D-30일 사전 업로드 · 추천코드 성과 월 단위 검증</div>
+          <div style="margin-top:8px; font-size:12px; font-weight:700; color:var(--amber);">예산 승인 후 실행</div>
+        </div>
+      </div>
+
       <div class="two-col">
+
+        <!-- 좌: 론칭 이벤트 비용 시나리오 -->
+        <div class="panel">
+          <h3>론칭 이벤트 비용 시나리오</h3>
+          <div class="panel-sub">마일리지 5,000원 기준 · 카카오 4,500명 + 사이트 배너 추정</div>
+          <div class="chart-wrap short"><canvas id="eventChart"></canvas></div>
+          <div class="flow-rows" style="margin-top:12px;">
+            <div class="flow-row">
+              <div><strong>보수적</strong> <span class="pill green">최소</span></div>
+              <div class="flow-bar"><div class="flow-fill" style="width:48%; background:var(--green);"></div></div>
+              <div><strong>357만원</strong></div>
+            </div>
+            <div class="flow-row">
+              <div><strong>중간</strong> <span class="pill blue">권장</span></div>
+              <div class="flow-bar"><div class="flow-fill" style="width:68%; background:var(--blue);"></div></div>
+              <div><strong>510만원</strong></div>
+            </div>
+            <div class="flow-row">
+              <div><strong>최대</strong> <span class="pill amber">공격적</span></div>
+              <div class="flow-bar"><div class="flow-fill" style="width:100%; background:var(--amber);"></div></div>
+              <div><strong>750만원</strong></div>
+            </div>
+          </div>
+          <div class="insight blue" style="margin-top:12px;">
+            <strong>분석:</strong> 중간 시나리오(510만원) 기준 예상 도달 715~1,500명 — 카카오 미구독 회원은 사이트 배너·팝업으로 보완합니다.
+          </div>
+        </div>
+
+        <!-- 우: 정기 운영 예산 구성 -->
+        <div class="stack">
+          <div class="panel">
+            <h3>월 정기 운영 예산 구성</h3>
+            <div class="panel-sub">론칭 이후 3채널 정기 운영 기준</div>
+            <div style="margin-top:14px;">
+              <div class="budget-bar-row">
+                <div class="budget-bar-label">네이버 검색광고</div>
+                <div class="budget-bar-track"><div class="budget-bar-fill" style="width:40%; background:var(--green);"></div></div>
+                <div class="budget-bar-value">80만원</div>
+              </div>
+              <div class="budget-bar-row">
+                <div class="budget-bar-label">인플루언서 (Tier 1)</div>
+                <div class="budget-bar-track"><div class="budget-bar-fill" style="width:40%; background:var(--amber);"></div></div>
+                <div class="budget-bar-value">80만원</div>
+              </div>
+              <div class="budget-bar-row">
+                <div class="budget-bar-label">블로그 운영비</div>
+                <div class="budget-bar-track"><div class="budget-bar-fill" style="width:5%; background:var(--blue);"></div></div>
+                <div class="budget-bar-value">10만원</div>
+              </div>
+              <div class="budget-bar-row">
+                <div class="budget-bar-label">카카오 채널</div>
+                <div class="budget-bar-track"><div class="budget-bar-fill" style="width:15%; background:#6b7280;"></div></div>
+                <div class="budget-bar-value">30만원</div>
+              </div>
+              <div class="budget-bar-row" style="border-top:2px solid var(--line); padding-top:12px; margin-top:4px;">
+                <div class="budget-bar-label" style="font-weight:900;">월 합계</div>
+                <div class="budget-bar-track"><div class="budget-bar-fill" style="width:100%; background:var(--navy);"></div></div>
+                <div class="budget-bar-value" style="font-weight:900;">200만원</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>연간 총 투자 요약</h3>
+            <div class="panel-sub">론칭 이벤트 일회성 + 정기 운영 12개월</div>
+            <div class="three-col" style="margin-top:12px;">
+              <div class="metric soft-blue">
+                <div class="label">론칭 이벤트</div>
+                <div class="value" style="font-size:20px;">510만원</div>
+                <div class="desc">중간 시나리오 권장</div>
+              </div>
+              <div class="metric soft-green">
+                <div class="label">정기 운영 (×12)</div>
+                <div class="value" style="font-size:20px;">2,400만원</div>
+                <div class="desc">200만원 × 12개월</div>
+              </div>
+              <div class="metric soft-amber">
+                <div class="label">연간 총 투자</div>
+                <div class="value" style="font-size:20px;">2,910만원</div>
+                <div class="desc">이벤트 포함 연간</div>
+              </div>
+            </div>
+            <div class="insight green" style="margin-top:10px;">
+              <strong>분석:</strong> 현행 월 50만원 대비 +300% — 단순 비용 증가가 아닌 유입·전환·재구매가 연결되는 구조 투자입니다.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SLIDE 8 · Search Strategy
+════════════════════════════════════════════════════════ -->
+<section class="slide" id="slide8">
+  <div class="container">
+    <div class="card slide-card">
+      <span class="kicker">08 · Budget + KPI</span>
+      <div class="title-row">
+        <div>
+          <div class="h2">월 200만원 투자, 3채널 성과 구조</div>
+          <div class="subtitle">현행 50만원 대비 +300% — 유입·전환·재구매가 연결되는 구조를 만드는 투자입니다.</div>
+        </div>
+        <div class="page-no">8 / 10</div>
+      </div>
+
+      <div class="two-col">
+
+        <!-- 좌: 예산 구성 -->
         <div class="panel">
           <h3>월간 마케팅 예산 제안 (론칭 이후 정기 운영)</h3>
-          <div class="panel-sub">현행 30만원 대비 +467% — 채널 다변화 근거</div>
+          <div class="panel-sub">현행 50만원 대비 +300% · 4개 채널 분산 운영</div>
           <div style="margin-top:16px;">
-            <div class="budget-bar-row"><div class="budget-bar-label">네이버 검색광고</div><div class="budget-bar-track"><div class="budget-bar-fill" style="width:47%;background:var(--blue)"></div></div><div class="budget-bar-value">80만원</div></div>
-            <div class="budget-bar-row"><div class="budget-bar-label">인플루언서 (소형 2명)</div><div class="budget-bar-track"><div class="budget-bar-fill" style="width:47%;background:var(--amber)"></div></div><div class="budget-bar-value">80만원</div></div>
-            <div class="budget-bar-row"><div class="budget-bar-label">블로그 운영비</div><div class="budget-bar-track"><div class="budget-bar-fill" style="width:6%;background:var(--green)"></div></div><div class="budget-bar-value">10만원</div></div>
-            <div class="budget-bar-row" style="border-top:2px solid var(--line);padding-top:12px;margin-top:4px;"><div class="budget-bar-label" style="font-weight:900;">월 합계</div><div class="budget-bar-track"><div class="budget-bar-fill" style="width:100%;background:var(--navy)"></div></div><div class="budget-bar-value" style="font-weight:900;">170만원</div></div>
+            <div class="budget-bar-row">
+              <div class="budget-bar-label">네이버 검색광고</div>
+              <div class="budget-bar-track"><div class="budget-bar-fill" style="width:40%; background:var(--green);"></div></div>
+              <div class="budget-bar-value">80만원</div>
+            </div>
+            <div class="budget-bar-row">
+              <div class="budget-bar-label">인플루언서 (Tier 1)</div>
+              <div class="budget-bar-track"><div class="budget-bar-fill" style="width:40%; background:var(--amber);"></div></div>
+              <div class="budget-bar-value">80만원</div>
+            </div>
+            <div class="budget-bar-row">
+              <div class="budget-bar-label">카카오 채널</div>
+              <div class="budget-bar-track"><div class="budget-bar-fill" style="width:15%; background:var(--blue);"></div></div>
+              <div class="budget-bar-value">30만원</div>
+            </div>
+            <div class="budget-bar-row">
+              <div class="budget-bar-label">블로그 운영비</div>
+              <div class="budget-bar-track"><div class="budget-bar-fill" style="width:5%; background:#6b7280;"></div></div>
+              <div class="budget-bar-value">10만원</div>
+            </div>
+            <div class="budget-bar-row" style="border-top:2px solid var(--line); padding-top:12px; margin-top:4px;">
+              <div class="budget-bar-label" style="font-weight:900;">월 합계</div>
+              <div class="budget-bar-track"><div class="budget-bar-fill" style="width:100%; background:var(--navy);"></div></div>
+              <div class="budget-bar-value" style="font-weight:900;">200만원</div>
+            </div>
           </div>
+
           <div class="three-col" style="margin-top:14px;">
-            <div class="metric"><div class="label">일회성 론칭 이벤트</div><div class="value" style="font-size:20px;">510만원</div><div class="desc">중간 시나리오 권장</div></div>
-            <div class="metric soft-blue"><div class="label">월간 정기 (×12)</div><div class="value" style="font-size:20px;">2,040만원</div><div class="desc">170만 × 12개월</div></div>
-            <div class="metric soft-amber"><div class="label">연간 총투자</div><div class="value" style="font-size:20px;">2,550만원</div><div class="desc">이벤트 포함 연간</div></div>
+            <div class="metric">
+              <div class="label">일회성 론칭 이벤트</div>
+              <div class="value" style="font-size:20px;">510만원</div>
+              <div class="desc">중간 시나리오 권장</div>
+            </div>
+            <div class="metric soft-blue">
+              <div class="label">정기 운영 (×12)</div>
+              <div class="value" style="font-size:20px;">2,400만원</div>
+              <div class="desc">200만원 × 12개월</div>
+            </div>
+            <div class="metric soft-amber">
+              <div class="label">연간 총 투자</div>
+              <div class="value" style="font-size:20px;">2,910만원</div>
+              <div class="desc">론칭 이벤트 포함</div>
+            </div>
           </div>
-          <div class="insight green">
-            <strong>분석:</strong> 현재는 최소 비용 구조로 성과 확대에 한계 — 예산을 구조적으로 확대할 경우 유입 규모와 전환 성과를 동시에 성장시킬 수 있습니다.
+
+          <div class="insight green" style="margin-top:12px;">
+            <strong>분석:</strong> 현행 단일 채널 50만원 구조에서 4채널 200만원으로 전환 — 채널별 역할을 분리해 유입·전환·재구매가 동시에 작동하는 구조를 만듭니다.
           </div>
         </div>
+
+        <!-- 우: KPI + 즉시실행/승인 -->
         <div class="stack">
           <div class="panel">
             <h3>KPI 목표 대시보드</h3>
-            <table class="compare-table">
-              <thead><tr><th>채널</th><th>목표 지표</th><th>측정 방법</th></tr></thead>
+            <div class="panel-sub">채널별 측정 지표 · 월 1회 리포트 기준</div>
+            <table class="compare-table" style="margin-top:12px;">
+              <thead>
+                <tr><th>채널</th><th>목표 지표</th><th>측정 방법</th></tr>
+              </thead>
               <tbody>
-                <tr><td><strong>론칭 이벤트</strong></td><td>미거래 회원 <span class="pill green">5%+ 전환</span></td><td>이벤트 종료 후 거래 건수 집계</td></tr>
-                <tr><td><strong>카카오 채널</strong></td><td>기존 CTR 대비 <span class="pill blue">+10~20%</span></td><td>채널 통계 리포트 월 1회</td></tr>
-                <tr><td><strong>블로그</strong></td><td><span class="pill amber">월 유입 500+</span> (3개월 내)</td><td>네이버 블로그 통계 월 1회</td></tr>
-                <tr><td><strong>인플루언서</strong></td><td>추천코드 가입 전환율 (티어별)</td><td>추천코드 가입 집계 월 1회</td></tr>
-                <tr><td><strong>네이버 광고</strong></td><td>CTR 3.8% / CPC 600원↓ / 클릭 1,000건+</td><td>네이버 광고 리포트 월 1회</td></tr>
-                <tr><td><strong>VIP 복귀</strong></td><td>이탈 VIP 중 <span class="pill red">10명 복귀</span></td><td>복귀 카카오 발송 후 거래 이력 확인</td></tr>
+                <tr>
+                  <td><strong>론칭 이벤트</strong></td>
+                  <td>미거래 회원 <span class="pill green">5%+ 전환</span></td>
+                  <td>이벤트 종료 후 거래 집계</td>
+                </tr>
+                <tr>
+                  <td><strong>카카오 채널</strong></td>
+                  <td>기존 CTR 대비 <span class="pill blue">+10~20%p</span></td>
+                  <td>채널 통계 리포트 월 1회</td>
+                </tr>
+                <tr>
+                  <td><strong>블로그</strong></td>
+                  <td><span class="pill amber">월 유입 500+</span> (3개월 내)</td>
+                  <td>네이버 블로그 통계 월 1회</td>
+                </tr>
+                <tr>
+                  <td><strong>인플루언서</strong></td>
+                  <td>추천코드 전환율 (Tier별)</td>
+                  <td>추천코드 가입 집계 월 1회</td>
+                </tr>
+                <tr>
+                  <td><strong>네이버 광고</strong></td>
+                  <td>CTR 3.8% · CPC 600원↓ · 클릭 1,000건+</td>
+                  <td>네이버 광고 리포트 월 1회</td>
+                </tr>
+                <tr>
+                  <td><strong>VIP 복귀</strong></td>
+                  <td>이탈 VIP 중 <span class="pill red">10명 복귀</span></td>
+                  <td>복귀 발송 후 거래 이력 확인</td>
+                </tr>
               </tbody>
             </table>
           </div>
+
           <div class="decision-grid">
             <div class="decision-box approve">
               <h3>즉시 실행 가능</h3>
               <ul>
-                <li>카카오 신규 가입 광고톡 정기 전송</li>
-                <li>블로그 시리즈 발행 (1엔의 행복)</li>
-                <li>네이버 키워드 재구성 세팅</li>
-                <li>지식인 답변 시작</li>
+                <li>카카오 정기 세그먼트 발송 설계</li>
+                <li>블로그 1시리즈 발행 시작</li>
+                <li>비효율 키워드 정리 + 재구성</li>
                 <li>VIP 이탈 사유 설문 발송</li>
+                <li>인플루언서 후보 리스트업</li>
               </ul>
             </div>
             <div class="decision-box review">
               <h3>승인 필요</h3>
               <ul>
-                <li>론칭 이벤트 예산 구성</li>
-                <li>키워드광고 예산 증액 (30→80만원)</li>
-                <li>인플루언서 협업 예산 승인</li>
-                <li>VIP 복귀 마일리지 10만원 설계 승인</li>
-                <li>리뉴얼 D-Day 확정 후 카카오톡 구성</li>
+                <li>론칭 이벤트 예산 510만원</li>
+                <li>키워드 광고 예산 증액 (50→80만원)</li>
+                <li>인플루언서 협업 예산 80만원</li>
+                <li>VIP 복귀 마일리지 10만원 설계</li>
+                <li>리뉴얼 D-Day 확정 후 시퀀스 집행</li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
+
       <div class="insight amber" style="margin-top:14px;">
         <strong>분석:</strong> 본 전략은 비용 증가가 아니라 성과 확장을 위한 투자입니다 — 신규 유입·전환·재구매·VIP 락인이 연결되는 구조가 완성될 때 일회성이 아닌 지속 성장 기반이 만들어집니다.
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════
+     SLIDE 9 · Influencer Strategy
+════════════════════════════════════════════════════════ -->
+<section class="slide" id="slide9">
+  <div class="container">
+    <div class="card slide-card">
+      <span class="kicker">09 · Expected Outcomes</span>
+      <div class="title-row">
+        <div>
+          <div class="h2">마케팅 실행 시 기대 성과 6가지</div>
+          <div class="subtitle">현황 수치 → 목표 수치, 각 지표의 변화를 한눈에 확인합니다.</div>
+        </div>
+        <div class="page-no">9 / 10</div>
+      </div>
+
+      <!-- 상단 3개 -->
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:20px;">
+
+        <div style="border:2px solid var(--blue); border-radius:18px; background:#fff; padding:22px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;">
+          <span style="font-size:15px; font-weight:800; letter-spacing:.07em; padding:3px 10px; border-radius:999px; background:var(--soft-blue); color:var(--blue);">① 신규 유입</span>
+          <div style="font-size:15px; font-weight:800; color:var(--text);">월 클릭수</div>
+          <div style="display:flex; align-items:center; gap:10px; justify-content:center;">
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">현재</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:#9ca3af;">477건</div></div>
+            <div style="font-size:22px; color:var(--blue); font-weight:900;">→</div>
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">목표</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:var(--blue);">1,000건</div></div>
+          </div>
+          <div style="font-size:20px; font-weight:900; color:var(--blue);">×2.1</div>
+          <div style="font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:8px; line-height:1.5;">* 키워드 재구성 + 예산 50→80만원 · 블로그 월 500명 추가 시 합산 1,500건+ 가능</div>
+        </div>
+
+        <div style="border:2px solid var(--green); border-radius:18px; background:#fff; padding:22px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;">
+          <span style="font-size:15px; font-weight:800; letter-spacing:.07em; padding:3px 10px; border-radius:999px; background:var(--soft-green); color:var(--green);">② 거래 매출</span>
+          <div style="font-size:15px; font-weight:800; color:var(--text);">월 거래 건수 증가율</div>
+          <div style="display:flex; align-items:center; gap:10px; justify-content:center;">
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">현재</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:#9ca3af;">+0%</div></div>
+            <div style="font-size:22px; color:var(--green); font-weight:900;">→</div>
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">목표</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:var(--green);">+1.5%</div></div>
+          </div>
+          <div style="font-size:20px; font-weight:900; color:var(--green);">+97.5건/월</div>
+          <div style="font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:8px; line-height:1.5;">* 수수료 2안 손실 회복 기준선 · 마케팅 유입으로 구조적 달성 가능</div>
+        </div>
+
+        <div style="border:2px solid var(--red); border-radius:18px; background:#fff; padding:22px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;">
+          <span style="font-size:15px; font-weight:800; letter-spacing:.07em; padding:3px 10px; border-radius:999px; background:var(--soft-red); color:var(--red);">③ VIP 복귀</span>
+          <div style="font-size:15px; font-weight:800; color:var(--text);">이탈 VIP 복귀 수</div>
+          <div style="display:flex; align-items:center; gap:10px; justify-content:center;">
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">실이탈</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:#9ca3af;">188명</div></div>
+            <div style="font-size:22px; color:var(--red); font-weight:900;">→</div>
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">복귀 목표</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:var(--red);">10명</div></div>
+          </div>
+          <div style="font-size:20px; font-weight:900; color:var(--red);">월 +230만원 회복</div>
+          <div style="font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:8px; line-height:1.5;">* 복귀 10명 × 월 22건 기준 · 마일리지 100만원 투자 대비 회수 기간 약 2주</div>
+        </div>
+
+      </div>
+
+      <!-- 하단 3개 -->
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:14px;">
+
+        <div style="border:2px solid var(--amber); border-radius:18px; background:#fff; padding:22px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;">
+          <span style="font-size:15px; font-weight:800; letter-spacing:.07em; padding:3px 10px; border-radius:999px; background:var(--soft-amber); color:var(--amber);">④ 고객 만족도</span>
+          <div style="font-size:15px; font-weight:800; color:var(--text);">만족도 상승</div>
+          <div style="display:flex; align-items:center; gap:10px; justify-content:center;">
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">현재</div><div style="font-size:28px; font-weight:900; letter-spacing:-.03em; color:#9ca3af;">미측정</div></div>
+            <div style="font-size:22px; color:var(--amber); font-weight:900;">→</div>
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">목표</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:var(--amber);">+15%p</div></div>
+          </div>
+          <div style="font-size:20px; font-weight:900; color:var(--amber);">1년 내 달성</div>
+          <div style="font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:8px; line-height:1.5;">* 연 1회 설문 실시 · 리워드 제공 → 내년 동기 대비 15%p 상승 목표</div>
+        </div>
+
+        <div style="border:2px solid var(--navy); border-radius:18px; background:#fff; padding:22px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;">
+          <span style="font-size:15px; font-weight:800; letter-spacing:.07em; padding:3px 10px; border-radius:999px; background:#f1f5f9; color:var(--navy);">⑤ 1인당 구매 건수</span>
+          <div style="font-size:15px; font-weight:800; color:var(--text);">재구매 횟수</div>
+          <div style="display:flex; align-items:center; gap:10px; justify-content:center;">
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">현재</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:#9ca3af;">1건</div></div>
+            <div style="font-size:22px; color:var(--navy); font-weight:900;">→</div>
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">목표</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:var(--navy);">2건+</div></div>
+          </div>
+          <div style="font-size:20px; font-weight:900; color:var(--navy);">이탈율 44.9% → 개선</div>
+          <div style="font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:8px; line-height:1.5;">* 마일리지 60일 소멸 구조가 재구매 트리거로 작동</div>
+        </div>
+
+        <div style="border:2px solid var(--green); border-radius:18px; background:#fff; padding:22px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;">
+          <span style="font-size:15px; font-weight:800; letter-spacing:.07em; padding:3px 10px; border-radius:999px; background:var(--soft-green); color:var(--green);">⑥ 신규 이탈율</span>
+          <div style="font-size:15px; font-weight:800; color:var(--text);">첫 구매 후 이탈율</div>
+          <div style="display:flex; align-items:center; gap:10px; justify-content:center;">
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">현재</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:#9ca3af;">63.6%</div></div>
+            <div style="font-size:22px; color:var(--green); font-weight:900;">→</div>
+            <div><div style="font-size:12px; color:var(--muted); margin-bottom:2px;">목표</div><div style="font-size:32px; font-weight:900; letter-spacing:-.03em; color:var(--green);">55%↓</div></div>
+          </div>
+          <div style="font-size:20px; font-weight:900; color:var(--green);">-8.6%p</div>
+          <div style="font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:8px; line-height:1.5;">* 첫 구매 완료 시 3,000 마일리지 즉시 지급 → 2번째 거래 유인</div>
+        </div>
+
+      </div>
+
+      <div class="insight blue" style="margin-top:18px;">
+        <strong>분석:</strong> 6개 지표는 독립이 아닌 연결 구조입니다 — 신규 유입 → 첫 구매 마일리지 → 재구매 → 등급 상승 → VIP 락인의 순환이 완성될 때 비로소 안정적인 성장 구조가 만들어집니다.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <script>
+  // Slide 3 — 카카오 CTR 월별 추이
+new Chart(document.getElementById('kakaoCtrChart'), {
+  type: 'bar',
+  data: {
+    labels: ['1월','2월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+    datasets: [{
+      label: 'CTR (%)',
+      data: [0.41, 0.82, 0.43, 0.39, 0.41, 0.47, 0.52, 0.69, 0.44, 0.28, 0.43],
+      backgroundColor: [
+        '#e5e7eb','#2563eb','#e5e7eb','#e5e7eb','#e5e7eb',
+        '#e5e7eb','#e5e7eb','#e5e7eb','#e5e7eb','#e5e7eb','#e5e7eb'
+      ],
+      borderRadius: 8,
+      barPercentage: 0.6,
+      categoryPercentage: 0.75
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => `CTR: ${ctx.raw}%` } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: {
+        grid: { color: '#e5e7eb' },
+        ticks: { callback: v => v + '%', font: { size: 11 } },
+        min: 0,
+        max: 1.0
+      }
+    }
+  }
+});
+
+// Slide 3 — 카카오 구독자 도넛
+new Chart(document.getElementById('kakaoDonut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['카카오 구독자 (4,500명)', '미구독 (25,500명)'],
+    datasets: [{
+      data: [4500, 25500],
+      backgroundColor: ['#2563eb', '#e5e7eb'],
+      borderWidth: 3,
+      borderColor: '#fff',
+      hoverOffset: 4
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: '62%',
+    layout: { padding: 4 },
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { usePointStyle: true, boxWidth: 10, padding: 12, font: { size: 11 } }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => `${ctx.label}: ${(ctx.raw / 30000 * 100).toFixed(0)}%`
+        }
+      }
+    }
+  }
+});
 Chart.defaults.font.family = 'Pretendard';
 Chart.defaults.color = '#374151';
 Chart.defaults.plugins.legend.onClick = () => {};
+// Slide 3 — 카카오 CTR 월별 편차
+new Chart(document.getElementById('kakaoCtrChart'), {
+  type: 'bar',
+  data: {
+    labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+    datasets: [{
+      label: 'CTR (%)',
+      data: [2.8, 3.1, 11.0, 2.8, 3.4, 3.2],
+      backgroundColor: [
+        '#e5e7eb','#e5e7eb','#2563eb','#e5e7eb','#e5e7eb','#e5e7eb'
+      ],
+      borderRadius: 8,
+      barPercentage: 0.55,
+      categoryPercentage: 0.7
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => `CTR: ${ctx.raw}%` } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: {
+        grid: { color: '#e5e7eb' },
+        ticks: { callback: v => v + '%', font: { size: 11 } },
+        max: 14
+      }
+    }
+  }
+});
 
+// Slide 3 — 카카오 구독자 도넛
+new Chart(document.getElementById('kakaoDonut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['카카오 구독자 (4,500명)', '미구독 (25,500명)'],
+    datasets: [{
+      data: [4500, 25500],
+      backgroundColor: ['#2563eb', '#e5e7eb'],
+      borderWidth: 3,
+      borderColor: '#fff',
+      hoverOffset: 4
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, cutout: '62%',
+    layout: { padding: 4 },
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { usePointStyle: true, boxWidth: 10, padding: 12, font: { size: 11 } }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => `${ctx.label}: ${(ctx.raw / 30000 * 100).toFixed(0)}%`
+        }
+      }
+    }
+  }
+});
 const centerTextPlugin = {
   id: 'centerTextPlugin',
   afterDraw(chart, args, pluginOptions) {
@@ -1045,7 +1617,7 @@ const centerTextPlugin = {
 };
 
 // Slide 2 — 도넛
-new Chart(document.getElementById('memberDonut'), {
+new Chart(document.getElementById('kakaoDonut'), {
   type: 'doughnut',
   plugins: [ChartDataLabels, centerTextPlugin],
   data: {
@@ -1063,11 +1635,11 @@ new Chart(document.getElementById('memberDonut'), {
   }
 });
 
-// Slide 4 — 이벤트 비용 시나리오
+// Slide 6 — 이벤트 비용 시나리오
 new Chart(document.getElementById('eventChart'), {
   type: 'bar',
   data: {
-    labels: ['보수적 (715명)', '중간 (1,020명)', '최대 (1,500명)'],
+    labels: ['보수적 (전환 715명)', '중간 (전환 1,020명)', '최대 (전환 1,500명)'],
     datasets: [{ data: [357.5, 510, 750], backgroundColor: ['#15803d', '#2563eb', '#d97706'], borderRadius: 10, barPercentage: 0.5, categoryPercentage: 0.72 }]
   },
   options: {
