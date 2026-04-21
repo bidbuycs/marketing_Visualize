@@ -8,6 +8,28 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 <style>
+  /* 로드맵 전용 */
+.rm-outer{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin-top:20px;}
+.rm-top-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;margin-bottom:14px;}
+.rm-tc{padding:0 12px;}
+.rm-tc.c{text-align:center;}
+.rm-tc.r{text-align:center;}
+.rm-tt{font-size:12px;font-weight:800;color:var(--text);margin-bottom:4px;}
+.rm-ti{font-size:11px;color:var(--muted);line-height:1.75;}
+.rm-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.rm-shape{background:#dbeafe;padding:16px 10px;display:flex;flex-direction:column;align-items:center;gap:6px;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%,12% 50%);}
+.rm-shape.rm-first{clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);}
+.rm-shape.rm-last{clip-path:polygon(0 0,100% 0,100% 100%,0 100%,12% 50%);background:#bfdbfe;}
+.rm-ic{width:30px;height:30px;background:rgba(255,255,255,0.65);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.rm-sn{font-size:11px;font-weight:800;color:#1d4ed8;}
+.rm-sl{font-size:12px;font-weight:700;color:#1e40af;text-align:center;line-height:1.3;}
+.rm-sl.rm-dk{color:#1e3a8a;}
+.rm-bot-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:12px;}
+.rm-bc{padding:0 12px;}
+.rm-bc.c{text-align:center;}
+.rm-bc.r{text-align:center;}
+.rm-bt{font-size:12px;font-weight:800;color:var(--text);margin-bottom:3px;}
+.rm-bi{font-size:11px;color:var(--muted);line-height:1.75;}
   .chart-wrap.mini { height: 180px; }
 :root{
   --bg:#f5f7fa; --panel:#ffffff; --text:#111827; --muted:#6b7280; --line:#e5e7eb;
@@ -253,7 +275,7 @@ a{text-decoration:none}
       <span>BIDBUY KOREA · 마케팅 제안서</span>
     </div>
     <div class="quick-nav">
-      <a href="#slide1">1. 현황</a>
+      <a href="#slide1">1. 현황 / 로드맵</a>
       <a href="#slide2">2. VIP 복귀</a>
       <a href="#slide3">3. 카카오 전략</a>
       <a href="#slide4">4. 블로그 전략</a>
@@ -375,7 +397,79 @@ a{text-decoration:none}
           </div>
         </div>
       </div>
+<!-- 로드맵 -->
+      <div class="rm-outer">
 
+        <div class="rm-top-row">
+          <div class="rm-tc">
+            <div class="rm-tt">키워드 · 블로그</div>
+            <div class="rm-ti">네이버 키워드 재구성<br>블로그 4시리즈 발행<br>커뮤니티·인플루언서 리서치</div>
+          </div>
+          <div class="rm-tc c">
+            <div class="rm-tt">VIP 복귀 · 컨택</div>
+            <div class="rm-ti">VIP 복귀 설문 발송<br>인플루언서 후보 컨택<br>커뮤니티 제휴 협의</div>
+          </div>
+          <div class="rm-tc r">
+            <div class="rm-tt">카카오 · 론칭</div>
+            <div class="rm-ti">카카오 정기 큐레이션<br>광고톡 리뉴얼 예고<br>론칭 이벤트 집행</div>
+          </div>
+          <div class="rm-tc">
+            <div class="rm-tt">3채널 풀가동</div>
+            <div class="rm-ti">재구매율 향상<br>VIP 락인 구조<br>이탈율 63.6% → 55%</div>
+          </div>
+        </div>
+
+        <div class="rm-steps">
+          <div>
+            <div class="rm-shape rm-first">
+              <div class="rm-ic">📝</div>
+              <div class="rm-sn">1 단계</div>
+              <div class="rm-sl">리뉴얼<br>구성 전</div>
+            </div>
+          </div>
+          <div>
+            <div class="rm-shape">
+              <div class="rm-ic">⚙</div>
+              <div class="rm-sn">2 단계</div>
+              <div class="rm-sl">리뉴얼<br>작업 중</div>
+            </div>
+          </div>
+          <div>
+            <div class="rm-shape">
+              <div class="rm-ic">📢</div>
+              <div class="rm-sn">3 단계</div>
+              <div class="rm-sl">리뉴얼<br>이후</div>
+            </div>
+          </div>
+          <div>
+            <div class="rm-shape rm-last">
+              <div class="rm-ic">🎯</div>
+              <div class="rm-sn">최종 목표</div>
+              <div class="rm-sl rm-dk">마케팅<br>실행 · 적용</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rm-bot-row">
+          <div class="rm-bc">
+            <div class="rm-bi">클릭 477 → 800건<br>블로그 월 유입 500+</div>
+          </div>
+          <div class="rm-bc c">
+            <div class="rm-bt">기존 고객 재활성</div>
+            <div class="rm-bi">VIP 복귀 10명 목표<br>이탈 원인 데이터 확보</div>
+          </div>
+          <div class="rm-bc"></div>
+          <div class="rm-bc r">
+            <div class="rm-bt">3채널 선순환</div>
+            <div class="rm-bi">신규 유입 · 전환 · 재구매<br>VIP 락인 완성</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
     </div>
   </div>
 </section>
